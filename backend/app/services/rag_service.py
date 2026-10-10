@@ -6,35 +6,45 @@ from groq import Groq
 from ..config import GROQ_API_KEY, GROQ_MODEL
 from .embedding_service import EmbeddingService
 from .qdrant_service import QdrantService
+from .manifest_service import ManifestService
 from ..models.schema import SourceCitation, ChatResponse
 from ..utils.logger import logger
 
-SYSTEM_PROMPT = """You are YT Reviser, an expert AI tutor and senior computer science mentor.
-Your mission is to provide outstanding, deeply educational, and crystal-clear explanations grounded in lecture transcripts.
+SYSTEM_PROMPT = """You are YT Reviser, an expert AI tutor and senior computer science mentor for lecture revision.
+Your mission is to provide accurate, deeply educational, and crystal-clear explanations strictly grounded in the concepts taught in the lecture transcripts.
+
+CRITICAL SCOPE & GROUNDING RULES:
+1. PLAYLIST-RELEVANT QUESTIONS (ALWAYS ANSWER):
+   - If the student's question relates to the concepts, technologies, skills, or curriculum taught in the playlist (such as AI engineering, LLMs, prompt engineering, system role, temperature, RAG, AI agents, tools, APIs, interview prep, etc.), you MUST answer and explain it thoroughly!
+   - For overview questions like "what is AI engineering", synthesize how the instructor teaches and approaches the field across the course (e.g. building practical LLM apps, AI agents, RAG systems, and tool integration without heavy math/theory to solve engineering problems and crack AI interviews).
+   - Set "is_covered": true.
+
+2. UNRELATED QUESTIONS (REFUSE ONLY THESE):
+   - If and only if the student asks about a completely unrelated topic that is NOT part of this playlist's curriculum (for example: asking about Data Structures & Algorithms (DSA), competitive programming, frontend CSS frameworks, chemistry, or subjects outside this course), you MUST NOT answer from external knowledge or invent a tutorial.
+   - In that case, set "is_covered": false, and state:
+     "### ℹ️ Not Provided in Playlist Transcripts\\n\\nThis topic is not provided in the transcripts of the selected playlist. This course focuses on [actual topics covered in the playlist] and does not cover this subject."
 
 MULTILINGUAL & HINGLISH MASTERY:
 - The lecture transcripts are from real tech classrooms and courses where instructors teach in English, Hindi, and conversational Hinglish.
-- Key technical terms are frequently spoken in Hinglish and transcribed in Devanagari or phonetic Hindi (e.g., "तेमप्रेच्र / तेमठ्रेचर / तापमान" = Temperature, "सिस्टम रोल" = System Role, "ललम / एलएलएम" = LLM, "राग" = RAG, "प्रॉम्प्ट" = Prompt, "स्टैक" = Stack, "बाइनरी सर्च" = Binary Search, "मर्ज इंटरवल" = Merge Interval, "क्रिएटिविटी / ख्रीटिविटी" = Creativity / Randomness, "एजेंट" = AI Agent, "टोकन" = Token).
-- Always comprehend these phonetic transcripts seamlessly and extract the instructor's core teachings.
+- Key technical terms are frequently spoken in Hinglish and transcribed in Devanagari or phonetic Hindi (e.g., "तेमप्रेच्र / तेमठ्रेचर / तापमान" = Temperature, "सिस्टम रोल" = System Role, "ललम / एलएलएम" = LLM, "राग" = RAG, "प्रॉम्प्ट" = Prompt, "स्टैक" = Stack, "बाइनरी सर्च" = Binary Search, "एजेंट" = AI Agent, "टोकन" = Token).
+- Always comprehend these phonetic transcripts seamlessly and extract the instructor's core teachings when the concept is present.
 - Ignore minor transcription speech disfluencies or repetitive background noise in the text.
 
-PEDAGOGICAL TEACHING GUIDELINES:
+PEDAGOGICAL TEACHING GUIDELINES (WHEN ANSWERING COVERED TOPICS):
 1. Concept-First & Authoritative: Begin immediately with a clear, concise definition of the concept in accessible, professional language.
 2. Step-by-Step Breakdown:
-   - What the concept is.
-   - How it works, its valid parameters/values (e.g. Temperature 0 to 2 in LLMs, default values, deterministic vs creative outputs, or Monotonic Stack indexing in DSA).
-   - The instructor's specific analogies, metaphors, and real-world intuition (e.g. the 3-year-old child predicting days of the week, Doctor agent needing Temperature 0 for facts vs Media agent needing higher Temperature for creativity, or the fan regulator analogy for binary search).
+   - What the concept is as taught by the instructor.
+   - How it works, its valid parameters/values (e.g. Temperature 0 to 2 in LLMs, default values, deterministic vs creative outputs).
+   - The instructor's specific analogies, metaphors, and real-world intuition (e.g. the 3-year-old child predicting days of the week, Doctor agent needing Temperature 0 for facts vs Media agent needing higher Temperature for creativity, fan regulator analogy).
    - Practical engineering takeaway / implementation tip.
-3. Multiple Context Disambiguation:
-   - If a concept is used in multiple courses (e.g. "Temperature" as an LLM hyperparameter in AI courses vs "Temperature" as daily weather data in Monotonic Stack DSA problems), clearly address the primary focus of the student's question while contextualizing the lectures.
-4. Rich Markdown Formatting: Use clean section headers (###), bullet points, bold key terms, tables, or code snippets to maximize readability.
-5. Tone & Polish: Speak like a world-class tutor. Never refer to internal system components like "chunks", "Qdrant", "vector database", or "embeddings".
-6. Comprehensive Grounding: Synthesize the explanation thoroughly from the retrieved context. Never give a blunt one-line refusal if related lecture material or analogies are present in the context.
-7. Follow-Up Inquiries: Always generate exactly 3 highly relevant, thought-provoking follow-up questions for the student.
+3. Rich Markdown Formatting: Use clean section headers (###), bullet points, bold key terms, tables, or code snippets to maximize readability.
+4. Tone & Polish: Speak like a world-class tutor. Never refer to internal system components like "chunks", "Qdrant", "vector database", or "embeddings".
+5. Follow-Up Inquiries: Always generate exactly 3 highly relevant follow-up questions related to what was taught in the lectures.
 
 RESPONSE FORMAT (Strict JSON):
 {
-  "answer": "Your comprehensive, beautifully formatted markdown explanation...",
+  "answer": "Your comprehensive explanation if covered, OR your clear refusal message if the topic is not covered in these lectures...",
+  "is_covered": true,
   "follow_up_questions": [
     "First relevant follow-up question?",
     "Second relevant follow-up question?",
@@ -44,6 +54,14 @@ RESPONSE FORMAT (Strict JSON):
 """
 
 CONCEPT_EXPANSIONS: Dict[str, Dict[str, List[str]]] = {
+    "ai engineering": {
+        "keywords": ["AI engineer", "AI engineering", "LLM", "AI agents", "RAG", "prompt engineering", "interview", "projects"],
+        "phonetics": ["एआई", "इंजीनियर", "ललम", "राग", "एजेंट"],
+    },
+    "ai engineer": {
+        "keywords": ["AI engineer", "AI engineering", "LLM", "AI agents", "RAG", "prompt engineering", "interview", "projects"],
+        "phonetics": ["एआई", "इंजीनियर", "ललम", "राग", "एजेंट"],
+    },
     "temperature": {
         "keywords": ["temperature", "creativity", "randomness", "system role", "parameter", "0 to 2", "prediction"],
         "phonetics": ["तेमप्रेच्र", "तेमठ्रेचर", "तापमान", "क्रीटिविटी", "प्रेडिक्शन", "ललम"],
@@ -323,6 +341,19 @@ class RAGService:
                 follow_up_questions=[],
             )
 
+        # Resolve playlist title if playlist_id is provided
+        playlist_title = None
+        if playlist_id:
+            try:
+                manifest_service = ManifestService.get_instance()
+                pl_entry = manifest_service.get_playlist(playlist_id)
+                if pl_entry:
+                    playlist_title = pl_entry.title
+            except Exception:
+                pass
+
+        course_label = f"the **{playlist_title}** playlist" if playlist_title else "the selected lectures"
+
         # Retrieve candidates with hybrid multi-vector + lexical expansion
         results = self._retrieve_candidates(
             query=raw_question,
@@ -331,14 +362,22 @@ class RAGService:
             top_k=top_k,
         )
 
-        if not results:
+        top_score = max((getattr(r, "score", 0.0) for r in results), default=0.0)
+
+        # Early check: if no results or top similarity is too weak in filtered playlist
+        if not results or (playlist_id and top_score < 0.38):
             return ChatResponse(
-                answer="I could not find any relevant lecture material in your indexed videos for this question. Try synchronizing the playlist to index all episodes.",
+                answer=(
+                    f"### ℹ️ No Information in Selected Course\n\n"
+                    f"There is no information about **{raw_question}** in {course_label}.\n\n"
+                    f"The lectures in this playlist focus on other topics and do not cover this question. "
+                    f"Please ask a question related to what is taught in this course, or switch the filter to **All Indexed Lectures**."
+                ),
                 sources=[],
                 follow_up_questions=[
+                    f"What topics are covered in {playlist_title or 'this playlist'}?",
                     "Would you like to search across all playlists instead?",
-                    "Can you rephrase your question with specific terms from the lecture?",
-                    "Would you like to sync the lecture playlist first?"
+                    "Can you ask a question related to this lecture series?",
                 ],
             )
 
@@ -351,10 +390,27 @@ class RAGService:
                 follow_up_questions=[],
             )
 
+        scope_instruction = ""
+        if playlist_title:
+            scope_instruction = (
+                f"PLAYLIST RELEVANCE GUIDELINES:\n"
+                f"- The student is revising the playlist: '{playlist_title}'.\n"
+                f"- WHAT TO ANSWER (SET \"is_covered\": true): If the question asks about concepts, topics, or skills relevant to this course (such as AI engineering, building LLM apps, prompt engineering, system roles, temperature, AI agents, RAG, vector databases, tool calling, or interview prep), you MUST answer thoroughly by synthesizing what the instructor teaches, explains, and demonstrates across the lectures.\n"
+                f"- WHAT TO REFUSE (SET \"is_covered\": false): If and only if the question is about a completely unrelated topic outside the course curriculum (for example: Data Structures & Algorithms (DSA), competitive programming, frontend CSS/React web development, chemistry, etc.), you MUST NOT answer from outside knowledge. In that case, set \"is_covered\": false, and respond:\n"
+                f"  '### ℹ️ Not Provided in Playlist Transcripts\\n\\nThis topic is not provided in the transcripts of the {playlist_title} playlist. This course focuses on practical AI engineering (LLMs, AI agents, RAG, and prompt engineering) and does not cover this subject.'\n\n"
+            )
+        else:
+            scope_instruction = (
+                f"GROUNDING GUIDELINES:\n"
+                f"- Answer questions relevant to the topics and lessons taught in the retrieved transcripts.\n"
+                f"- If the topic is completely unrelated or absent from the lectures, set \"is_covered\": false and inform the student that it is not provided in the transcripts.\n\n"
+            )
+
         user_prompt = (
             f"STUDENT QUESTION:\n{raw_question}\n\n"
+            f"{scope_instruction}"
             f"RETRIEVED LECTURE TRANSCRIPT CONTEXT:\n{context_text}\n\n"
-            f"Please explain the concept thoroughly in the required JSON format."
+            f"Please synthesize the lecture teachings and provide your response in the required JSON format."
         )
 
         logger.info(f"Calling Groq model '{GROQ_MODEL}' with grounded context ({len(sources)} sources)...")
@@ -373,10 +429,16 @@ class RAGService:
             try:
                 data = json.loads(raw_content)
                 answer = data.get("answer", raw_content)
+                is_covered = data.get("is_covered", True)
                 follow_ups = data.get("follow_up_questions", [])
             except Exception:
                 answer = raw_content
+                is_covered = True
                 follow_ups = []
+
+            # If the topic is not covered in the lecture context, clear citations to prevent misleading links
+            if not is_covered or answer.startswith("### ℹ️"):
+                sources = []
 
             return ChatResponse(
                 answer=answer,
@@ -391,4 +453,5 @@ class RAGService:
                 sources=sources,
                 follow_up_questions=[],
             )
+
 

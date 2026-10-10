@@ -43,3 +43,17 @@ def test_playlists_endpoint():
     response = client.get("/api/playlists")
     assert response.status_code == 200
     assert isinstance(response.json(), list)
+
+def test_chat_unrelated_playlist_question():
+    response = client.post(
+        "/api/chat",
+        json={
+            "question": "how to prepare for organic chemistry exam",
+            "playlist_id": "PLW4OpyGE0RdY",
+        },
+    )
+    assert response.status_code == 200
+    data = response.json()
+    assert "no information" in data["answer"].lower()
+    assert len(data["sources"]) == 0
+
