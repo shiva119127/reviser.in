@@ -30,3 +30,5 @@ qdrant_db/
 .idea/
 .vscode/
 *.swp
+.vercel
+.env*

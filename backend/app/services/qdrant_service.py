@@ -40,10 +40,24 @@ class QdrantService:
             else:
                 logger.info(f"Initializing Qdrant client at custom path '{path}'...")
                 self.client = QdrantClient(path=path)
-        elif QDRANT_URL:
-            logger.info(f"Initializing Qdrant client with remote cluster '{QDRANT_URL}'...")
-            self.client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
-        elif QDRANT_PATH == ":memory:":
+            self._ensure_collection()
+            return
+
+        # Attempt remote connection only if a valid QDRANT_URL is configured
+        if QDRANT_URL:
+            try:
+                logger.info(f"Connecting to remote Qdrant cluster at '{QDRANT_URL}'...")
+                self.client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY, timeout=5.0)
+                self._ensure_collection()
+                logger.info("Connected to remote Qdrant cluster successfully.")
+                return
+            except Exception as e:
+                logger.warning(
+                    f"Failed to connect to remote Qdrant cluster at '{QDRANT_URL}' ({e}). "
+                    f"Falling back to local embedded storage at '{QDRANT_PATH}'."
+                )
+
+        if QDRANT_PATH == ":memory:":
             logger.info("Initializing in-memory Qdrant client...")
             self.client = QdrantClient(":memory:")
         else:

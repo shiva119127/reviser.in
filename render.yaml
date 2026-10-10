@@ -28,7 +28,3 @@ services:
         value: ./data/transcripts
       - key: CHUNK_DIR
         value: ./data/chunks
-      - key: QDRANT_URL
-        sync: false
-      - key: QDRANT_API_KEY
-        sync: false

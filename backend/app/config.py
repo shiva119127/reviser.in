@@ -1,4 +1,5 @@
 import os
+from typing import Optional
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -19,11 +20,19 @@ WHISPER_MODEL = os.getenv("WHISPER_MODEL", "small")
 WHISPER_DEVICE = os.getenv("WHISPER_DEVICE", "cpu")
 WHISPER_COMPUTE_TYPE = os.getenv("WHISPER_COMPUTE_TYPE", "int8")
 
+def _clean_str(val: Optional[str]) -> Optional[str]:
+    if not val:
+        return None
+    s = str(val).strip()
+    if not s or s.lower() in ("none", "null", "undefined", "false", '""', "''"):
+        return None
+    return s
+
 # Qdrant
 QDRANT_PATH = os.getenv("QDRANT_PATH", str(ROOT_DIR / "qdrant_db"))
 QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION", "yt_reviser")
-QDRANT_URL = os.getenv("QDRANT_URL", None)
-QDRANT_API_KEY = os.getenv("QDRANT_API_KEY", None)
+QDRANT_URL = _clean_str(os.getenv("QDRANT_URL", None))
+QDRANT_API_KEY = _clean_str(os.getenv("QDRANT_API_KEY", None))
 
 # Storage Paths
 DATA_DIR = ROOT_DIR / "data"
