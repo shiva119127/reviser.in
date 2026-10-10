@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT Reviser — AI Lecture Revision & Incremental RAG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="logo">▷</div>
+            <div>
+                <b>YT <span>Reviser</span></b>
+                <small>Learn · Understand · Revise</small>
+            </div>
+        </div>
+
+        <nav>
+            <button class="nav active" data-page="homePage">
+                <span class="nav-icon">⌂</span>
+                <span>Ask & Revise</span>
+            </button>
+
+            <button class="nav" data-page="ingestPage">
+                <span class="nav-icon">⬇</span>
+                <span>Ingest & Sync</span>
+            </button>
+
+            <button class="nav" data-page="playlistsPage">
+                <span class="nav-icon">≡</span>
+                <span>Playlists</span>
+            </button>
+
+            <button class="nav" data-page="historyPage">
+                <span class="nav-icon">◷</span>
+                <span>History</span>
+            </button>
+
+            <button class="nav" data-page="bookmarksPage">
+                <span class="nav-icon">♡</span>
+                <span>Bookmarks</span>
+            </button>
+
+            <button class="nav" data-page="aboutPage">
+                <span class="nav-icon">ⓘ</span>
+                <span>About</span>
+            </button>
+        </nav>
+
+        <div class="side-bottom">
+            <div class="server-status" id="serverStatusBadge">
+                <span class="status-dot"></span>
+                <span class="status-text">Checking Backend...</span>
+            </div>
+
+            <div class="side-footer-actions">
+                <button class="theme-toggle-btn" id="themeButton">☾ Dark Mode</button>
+                <button class="settings-btn" id="settingsButton">⚙ Settings</button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main">
+        <!-- GLOBAL TOAST NOTIFICATION -->
+        <div id="toast" class="toast hidden"></div>
+
+        <!-- =======================================================
+             PAGE 1: HOME / ASK & REVISE
+        ======================================================== -->
+        <section class="page active" id="homePage">
+            <div class="hero">
+                <div class="eyebrow">AI LECTURE TUTOR & REVISION ASSISTANT</div>
+                <h1>What would you like to revise today?</h1>
+                <p>Ask concept questions across your transcribed YouTube lectures and get grounded explanations with clickable timestamp links.</p>
+
+                <!-- ASK FORM -->
+                <form class="search-box" id="askForm">
+                    <span class="search-icon">⌕</span>
+                    <input id="questionInput" type="text" placeholder="e.g. How does binary search work in story problems? or What is attention mechanism?" autocomplete="off" required>
+                    <button id="askButton" type="submit">
+                        <span class="btn-icon">✦</span>
+                        <span>Ask AI</span>
+                    </button>
+                </form>
+
+                <!-- FILTER BAR (OPTIONAL) -->
+                <div class="ask-filter-bar">
+                    <label for="playlistFilterSelect">Filter by Playlist:</label>
+                    <select id="playlistFilterSelect">
+                        <option value="">All Indexed Lectures</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- LOADING SPINNER -->
+            <div class="state-card loading-state hidden" id="askLoading">
+                <div class="spinner"></div>
+                <h3>Searching Transcripts & Formulating Answer...</h3>
+                <p>Retrieving relevant timestamped chunks and querying the LLM tutor.</p>
+            </div>
+
+            <!-- ERROR DISPLAY -->
+            <div class="state-card error-state hidden" id="askError">
+                <div class="error-icon">!</div>
+                <div class="error-content" id="askErrorText"></div>
+            </div>
+
+            <!-- RESULTS SECTION -->
+            <div class="results-container hidden" id="results">
+                <!-- ANSWER CARD -->
+                <article class="card answer-card">
+                    <div class="card-header">
+                        <div class="card-tag purple">
+                            <span class="tag-icon">▤</span>
+                            <span>Concept Explanation</span>
+                        </div>
+                        <button class="bookmark-btn" id="bookmarkAnswer" title="Bookmark this explanation">♡ Save</button>
+                    </div>
+                    <div class="markdown-body" id="answer"></div>
+                </article>
+
+                <!-- SOURCES / TIMESTAMPS CARD -->
+                <article class="card sources-card" id="sourcesCard">
+                    <div class="card-header">
+                        <div class="card-tag red">
+                            <span class="tag-icon">▷</span>
+                            <span>Lecture Sources & Timestamps</span>
+                        </div>
+                    </div>
+                    <div class="sources-list" id="sourcesList"></div>
+                </article>
+
+                <!-- FOLLOW-UP QUESTIONS CARD -->
+                <article class="card followups-card" id="followupCard">
+                    <div class="card-header">
+                        <div class="card-tag yellow">
+                            <span class="tag-icon">✦</span>
+                            <span>Recommended Follow-Up Questions</span>
+                        </div>
+                    </div>
+                    <div class="followups-list" id="followupsList"></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- =======================================================
+             PAGE 2: INGEST & SYNC
+        ======================================================== -->
+        <section class="page" id="ingestPage">
+            <div class="page-title-row">
+                <div>
+                    <label class="section-label">INGESTION PIPELINE</label>
+                    <h1>Ingest & Synchronize YouTube Lectures</h1>
+                    <p>Enter a YouTube playlist or video URL. The pipeline downloads audio, transcribes with faster-whisper, chunks content, creates MiniLM embeddings, and indexes vectors in Qdrant.</p>
+                </div>
+            </div>
+
+            <div class="ingest-form-card">
+                <form id="ingestForm" class="ingest-form">
+                    <div class="input-group">
+                        <label for="ingestUrlInput">YouTube Video or Playlist URL</label>
+                        <input id="ingestUrlInput" type="url" placeholder="https://www.youtube.com/playlist?list=PLW4OpyGE0RdY..." required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="btnIngest" class="primary-btn">
+                            <span>⬇ Ingest Content</span>
+                        </button>
+                        <button type="button" id="btnSync" class="secondary-btn">
+                            <span>⟳ Sync Playlist</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- ACTIVE JOB PROGRESS PANEL -->
+            <div class="job-panel hidden" id="jobPanel">
+                <div class="job-header">
+                    <div class="job-meta">
+                        <span class="job-status-badge" id="jobStatusBadge">RUNNING</span>
+                        <h3 id="jobTargetTitle">Processing Playlist...</h3>
+                        <div class="job-subtitle" id="jobStageSubtitle">Current Stage: Discovering metadata</div>
+                    </div>
+                    <button class="retry-btn hidden" id="jobRetryBtn">↻ Retry Failed Items</button>
+                </div>
+
+                <!-- PROGRESS METRICS / COUNTERS -->
+                <div class="metric-counters">
+                    <div class="metric-box">
+                        <span class="metric-num" id="metricTotal">0</span>
+                        <span class="metric-lbl">Total Discovered</span>
+                    </div>
+                    <div class="metric-box success">
+                        <span class="metric-num" id="metricCompleted">0</span>
+                        <span class="metric-lbl">Completed</span>
+                    </div>
+                    <div class="metric-box warning">
+                        <span class="metric-num" id="metricSkipped">0</span>
+                        <span class="metric-lbl">Skipped (Up-to-Date)</span>
+                    </div>
+                    <div class="metric-box danger">
+                        <span class="metric-num" id="metricFailed">0</span>
+                        <span class="metric-lbl">Failed</span>
+                    </div>
+                </div>
+
+                <!-- PROGRESS BAR -->
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progressBarFill" style="width: 0%"></div>
+                </div>
+
+                <!-- DETAILED VIDEO STEPS LIST -->
+                <div class="job-videos-list" id="jobVideosList"></div>
+            </div>
+
+            <!-- RECENT JOBS TABLE -->
+            <div class="recent-jobs-section">
+                <h2>Recent Ingestion Jobs</h2>
+                <div id="recentJobsList" class="recent-jobs-list">
+                    <p class="empty-state-text">No ingestion jobs run in this session yet.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =======================================================
+             PAGE 3: REGISTERED PLAYLISTS
+        ======================================================== -->
+        <section class="page" id="playlistsPage">
+            <div class="page-title-row">
+                <div>
+                    <label class="section-label">INDEXED LECTURE REPOSITORIES</label>
+                    <h1>Registered Playlists</h1>
+                    <p>Overview of all indexed YouTube playlists and their synchronization statuses.</p>
+                </div>
+                <button class="secondary-btn" id="refreshPlaylistsBtn">⟳ Refresh List</button>
+            </div>
+
+            <div id="playlistsGrid" class="playlists-grid">
+                <p class="empty-state-text">Loading playlists...</p>
+            </div>
+        </section>
+
+        <!-- =======================================================
+             PAGE 4: CONVERSATION HISTORY
+        ======================================================== -->
+        <section class="page" id="historyPage">
+            <div class="page-title-row">
+                <div>
+                    <label class="section-label">BROWSER MEMORY</label>
+                    <h1>Question History</h1>
+                    <p>Your previous questions and tutor responses saved locally in your browser.</p>
+                </div>
+                <button class="danger-btn" id="clearHistory">Clear History</button>
+            </div>
+            <div id="historyList" class="history-list"></div>
+        </section>
+
+        <!-- =======================================================
+             PAGE 5: BOOKMARKS
+        ======================================================== -->
+        <section class="page" id="bookmarksPage">
+            <div class="page-title-row">
+                <div>
+                    <label class="section-label">SAVED REVISIONS</label>
+                    <h1>Bookmarks</h1>
+                    <p>Explanations and video timestamps saved for quick revision.</p>
+                </div>
+                <button class="danger-btn" id="clearBookmarks">Clear Bookmarks</button>
+            </div>
+            <div id="bookmarkList" class="bookmark-list"></div>
+        </section>
+
+        <!-- =======================================================
+             PAGE 6: ABOUT
+        ======================================================== -->
+        <section class="page" id="aboutPage">
+            <div class="about-card">
+                <div class="about-icon">▷</div>
+                <label class="section-label">PROJECT ARCHITECTURE</label>
+                <h1>YT Reviser</h1>
+                <p class="about-lead">AI-powered lecture revision with incremental RAG and clickable timestamped citations.</p>
+
+                <div class="about-grid">
+                    <div class="about-box">
+                        <b>⬇ Discovery & Ingestion</b>
+                        <p>yt-dlp discovery of playlists and audio streaming with FFmpeg post-processing.</p>
+                    </div>
+                    <div class="about-box">
+                        <b>🎙 Transcription with Timestamps</b>
+                        <p>faster-whisper on CPU/int8 producing precise segment start/end timestamps.</p>
+                    </div>
+                    <div class="about-box">
+                        <b>⏱ Time-Aware 75s Chunking</b>
+                        <p>Sentence-aligned chunks targeting ~75 seconds of video context for high retrieval precision.</p>
+                    </div>
+                    <div class="about-box">
+                        <b>🔍 Vector Indexing & RAG</b>
+                        <p>Sentence-Transformers all-MiniLM-L6-v2 (384-dim) vectors indexed in Qdrant with Groq LLM synthesis.</p>
+                    </div>
+                </div>
+
+                <div class="tech-pills">
+                    <span>FastAPI</span>
+                    <span>faster-whisper</span>
+                    <span>Sentence Transformers</span>
+                    <span>Qdrant</span>
+                    <span>Groq</span>
+                    <span>yt-dlp</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =======================================================
+         SETTINGS MODAL
+    ======================================================== -->
+    <div class="modal hidden" id="settingsModal">
+        <div class="modal-box">
+            <button class="modal-close-btn" id="closeSettings">×</button>
+            <h2>⚙ Backend Settings</h2>
+            
+            <label for="apiUrlInput">FastAPI Backend Base URL</label>
+            <div class="api-input-row">
+                <input id="apiUrlInput" type="text" placeholder="http://127.0.0.1:8000">
+                <button id="saveApiBtn" type="button" class="primary-btn">Save</button>
+            </div>
+            <small class="hint-text">Default backend URL: http://127.0.0.1:8000</small>
+
+            <hr>
+
+            <div class="setting-row">
+                <div>
+                    <b>Appearance</b>
+                    <small>Toggle Light or Dark theme</small>
+                </div>
+                <button id="modalThemeBtn" class="secondary-btn" type="button">☾ Toggle Theme</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT INCLUSION -->
+    <script src="script.js" defer></script>
+</body>
+</html>

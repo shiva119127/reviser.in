@@ -1,0 +1,1922 @@
+[
+    {
+        "chunk_id": 0,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 0.0,
+        "end": 38.6,
+        "text": "Dear students, how are you? First of all, look at this picture. We remember that we did Fibonacci in D.P. Remember, the first day, the first question was Fibonacci series. But at that time when we submitted the code, it took 39 milliseconds as you can see. Today, what we have submitted a few seconds ago, it took 2 ms. Memory also took less than that. When we did it that day, it took 8.4 ms. now 7.6 means there is some benefit in memory and memory means space and time means there is a lot of benefit but why did this happen, it means that the day we studied dp is not correct or the code we submitted now has some advanced computation",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=0s"
+    },
+    {
+        "chunk_id": 1,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 29.8,
+        "end": 62.1,
+        "text": "but why did this happen, it means that the day we studied dp is not correct or the code we submitted now has some advanced computation we will see that today, so see when the dp series started or when we have been telling you for a long time that any dsa question There are two ways to solve any topic or pattern of DSA question in the world. The first way is by recursion. Recursion means that you call a function again and again and keep changing the input.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=29s"
+    },
+    {
+        "chunk_id": 2,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 56.1,
+        "end": 74.1,
+        "text": "Recursion means that you call a function again and again and keep changing the input. That is one way. The second way is iterative. Iterative means you write for loop, while loop or do while loop somewhere. So any DSA problem can be solved in both ways.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=56s"
+    },
+    {
+        "chunk_id": 3,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 71.1,
+        "end": 90.3,
+        "text": "So any DSA problem can be solved in both ways. There is no such problem in the world which you can't do with recursion and you can do it with iterative. There is no such problem which you can do with iterative but not with recursion. Which one to choose depends on which one is easier to understand. For example, Sum of Array.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=71s"
+    },
+    {
+        "chunk_id": 4,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 88.34,
+        "end": 100.86,
+        "text": "For example, Sum of Array. In Sum of Array, it is easier to write a loop i is equal to 0, i less than n, i plus plus, this one. In that, we write iterative. Like Fibonacci. In Fibonacci, recursive was easier to read because you don't have to think much.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=88s"
+    },
+    {
+        "chunk_id": 5,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 97.1,
+        "end": 113.56,
+        "text": "In Fibonacci, recursive was easier to read because you don't have to think much. If you want to add n-1 and n-2, then it is easier and more convenient. If there was a decursion, then we write recursion. But one thing is certain that any problem can be solved in both ways. This is the difference.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=97s"
+    },
+    {
+        "chunk_id": 6,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 112.74,
+        "end": 126.8,
+        "text": "This is the difference. Till now, we have done so much in the DP series. Till now, we have done Fibonacci, Climbing Star, House Robber, 01 Knapsack. What we did in all four problems? First of all, we wrote its recursion.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=112s"
+    },
+    {
+        "chunk_id": 7,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 125.08,
+        "end": 137.74,
+        "text": "First of all, we wrote its recursion. It was a good thing that we wrote recursion. After that, we saw whether there is an overlapping problem in this. That means, the same input is not being repeated again and again. We are not solving the same input again and again.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=125s"
+    },
+    {
+        "chunk_id": 8,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 135.74,
+        "end": 145.74,
+        "text": "We are not solving the same input again and again. If this was the case, then what did we do? We had remembered the answer of that input. What did we do? We had remembered.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=135s"
+    },
+    {
+        "chunk_id": 9,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 144.74,
+        "end": 155.74,
+        "text": "We had remembered. This is called memorizing. What was this method called? Memoization. Whatever the spelling is, this method was called memoization.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=144s"
+    },
+    {
+        "chunk_id": 10,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 152.74,
+        "end": 162.74,
+        "text": "Whatever the spelling is, this method was called memoization. This is what we were doing. but but but now dp's question is also dsa's question right",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=152s"
+    },
+    {
+        "chunk_id": 11,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 160.74,
+        "end": 170.74,
+        "text": "dsa's question right so if dp's question dp's fibonacci or house robber can be done with recursion then house robber or fibonacci",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=160s"
+    },
+    {
+        "chunk_id": 12,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 168.74,
+        "end": 178.74,
+        "text": "then house robber or fibonacci can't be done with iterative it can be done with iterative we have said that it is not possible that something can be done with recursion",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=168s"
+    },
+    {
+        "chunk_id": 13,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 176.74,
+        "end": 191.74,
+        "text": "that something can be done with recursion and not with loop so fibonacci, house robber, 0-1 knapsack all of them There will be some way to solve it, there will be some way to solve it so that you can solve iterative and you don't have to write recursion.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=176s"
+    },
+    {
+        "chunk_id": 14,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 184.74,
+        "end": 217.74,
+        "text": "There will be some way to solve it, there will be some way to solve it so that you can solve iterative and you don't have to write recursion. This iterative method is called tabulation in DP. What is it called? It is called tabulation. Let me tell you one more thing very frankly that if in any interview if you are asked the question of DP, there are rare chances, but if asked, then you are not expected to write its recursion and memorize it. It is a good thing to know, you will be asked what you are doing, but your final selection,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=184s"
+    },
+    {
+        "chunk_id": 15,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 212.74,
+        "end": 240.74,
+        "text": "It is a good thing to know, you will be asked what you are doing, but your final selection, its final expectation, do you know what will happen to you? You will have to write the tabulation code and show it. Why? You will understand this in this lecture, but if it is said from above, then memoization, memoization in DP, I am giving you a recap, memoization which is a form of recursion and tabulation which is an iterative form.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=212s"
+    },
+    {
+        "chunk_id": 16,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 234.74,
+        "end": 255.74,
+        "text": "memoization which is a form of recursion and tabulation which is an iterative form. In DP, the time complexity of both is the same. Time complexity doesn't mean that there will be an order of n squared and an order of n. No, both will be an order of n. But, if we look at it practically, then tabulation takes less time.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=234s"
+    },
+    {
+        "chunk_id": 17,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 249.74,
+        "end": 267.24,
+        "text": "But, if we look at it practically, then tabulation takes less time. We will tell you why it takes less time. But, if we look at it realistically, the time complexity is the same. It has an order of n and an order of n. But, if you look at it in real life, as you saw in the screenshot of the lead code,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=249s"
+    },
+    {
+        "chunk_id": 18,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 262.44,
+        "end": 284.72,
+        "text": "But, if you look at it in real life, as you saw in the screenshot of the lead code, then tabulation takes less time. And one more thing, the most important thing in tabulation, in 90% of cases, it takes less space. Yes, yes, it takes less space. Meaning, in the problem of recursion, what do we tell you, what is going to be your biggest problem in memoization?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=262s"
+    },
+    {
+        "chunk_id": 19,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 279.22,
+        "end": 326.28,
+        "text": "Meaning, in the problem of recursion, what do we tell you, what is going to be your biggest problem in memoization? Your time will be less, time will save DP, but DP needs space. Why? Because the diary you are maintaining, the diary you are writing in, where will that diary come from? Diary will take space, write it in vector, array, hash map, write it in anything, it needs space, so the biggest problem of DP is that you need space, tabulation will solve this problem in 90% cases, you will have less space and realistically less time, remember realistically, time complexity will not be less, but if you run it, then you will run in less time, this method is called tabulation, Solving any DP problem in an iterative manner",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=279s"
+    },
+    {
+        "chunk_id": 20,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 322.38,
+        "end": 337.98,
+        "text": "Solving any DP problem in an iterative manner What is called tabulation Now it comes to how to write tabulation Till now you were writing recursion, memorization etc In this we will tell you a simple thing",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=322s"
+    },
+    {
+        "chunk_id": 21,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 333.72,
+        "end": 347.26,
+        "text": "In this we will tell you a simple thing Remember that trick With this one trick you can solve any problem If you have written its recursion approach Or memoization approach",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=333s"
+    },
+    {
+        "chunk_id": 22,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 344.92,
+        "end": 368.94,
+        "text": "Or memoization approach You can convert it to tabulation in 5 minutes In how many minutes? In 5 minutes, in 5 minutes tabulation, you don't have to remember any formula, you don't have to remember any rule, you just have to understand one small thing, if you understand this one thing, you can convert any question into tabulation, which is also your final goal, okay? Come, let's explain Fibonacci to you.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=344s"
+    },
+    {
+        "chunk_id": 23,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 366.94,
+        "end": 376.94,
+        "text": "Come, let's explain Fibonacci to you. You have understood the recursion in Fibonacci. Let's convert the same Fibonacci into tabulation today. And let's see how it is beneficial. What is beneficial?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=366s"
+    },
+    {
+        "chunk_id": 24,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 375.94,
+        "end": 381.94,
+        "text": "What is beneficial? Is it beneficial or not? Is space saved or not? We will see everything. Keep watching.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=375s"
+    },
+    {
+        "chunk_id": 25,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 380.94,
+        "end": 386.94,
+        "text": "Keep watching. Drink water and sit down. Let's start the video. So see, it will be very systematic. It will be very slow with me.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=380s"
+    },
+    {
+        "chunk_id": 26,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 385.94,
+        "end": 395.94,
+        "text": "It will be very slow with me. What we are saying will be understood a lot by registering. It will be completely clear to you in 10 minutes. Okay. So let's remember the recursion of Fibonacci.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=385s"
+    },
+    {
+        "chunk_id": 27,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 392.94,
+        "end": 408.94,
+        "text": "So let's remember the recursion of Fibonacci. Yes, in Fibonacci, we said that you can take the hash map of dp, it doesn't matter, the diary is a diary. Take the vector, take the hash map, take anything, we converted the vector because it will be easy to explain.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=392s"
+    },
+    {
+        "chunk_id": 28,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 407.94,
+        "end": 420.94,
+        "text": "easy to explain. Okay, so see what used to happen in Fibonacci, for whom you used to call the function? For n. In the beginning, in this dp, dp is your diary, so in the beginning, all the answers are minus 1.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=407s"
+    },
+    {
+        "chunk_id": 29,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 419.94,
+        "end": 457.34,
+        "text": "1. Means you have seen this in house robber, you have seen this in knapsack that it is means you don't know its answer till now, you will know, it's a good thing, first of all, the base case used to come that if n is 0 or 1, then return any, means, Fibonacci used to tell you that if n is 0, then the answer will be 0, if n is 1, then the answer will be 1, very simple, very comfortable, very good, after that, you used to see that if dp of n is not minus 1, means, if you are trying to find the answer of n, if its answer is done, if its answer is computed, then don't do the same thing again and again, return directly from here, this was also correct, If this is not the case, means if there is no answer in your DP,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=419s"
+    },
+    {
+        "chunk_id": 30,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 454.94,
+        "end": 464.34,
+        "text": "means if there is no answer in your DP, if you still don't know the answer of this n, then what would you do? Then you had only one option, that you call the recursion for which?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=454s"
+    },
+    {
+        "chunk_id": 31,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 462.34,
+        "end": 472.54,
+        "text": "that you call the recursion for which? What should be the answer of fun of n? Fun of n-1 plus fun of n-2 and whatever answer comes out, we would store it in the DP also.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=462s"
+    },
+    {
+        "chunk_id": 32,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 470.94,
+        "end": 479.94,
+        "text": "we would store it in the DP also. We thought that it will be useful in the future. This was the recursion code of your Fibonacci. Okay? Now, your goal is that you have to write the tabulation,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=470s"
+    },
+    {
+        "chunk_id": 33,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 477.54,
+        "end": 490.44,
+        "text": "Now, your goal is that you have to write the tabulation, that is, in the loop, now we don't have to write the recursion, we have to find out the answer by writing a loop if someone asks you to tell the answer of n is equal to 5",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=477s"
+    },
+    {
+        "chunk_id": 34,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 486.74,
+        "end": 498.34,
+        "text": "if someone asks you to tell the answer of n is equal to 5 you have to write a loop and tell the answer you don't have to write recursive function that is your goal, for what? for tabulation",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=486s"
+    },
+    {
+        "chunk_id": 35,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 496.84,
+        "end": 505.14,
+        "text": "for tabulation so see, any recursion once you write recursion once you understand recursion to convert it into tabulation",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=496s"
+    },
+    {
+        "chunk_id": 36,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 503.44,
+        "end": 516.14,
+        "text": "to convert it into tabulation there is a simple flow there is a flow chart type we will tell you that, see First of all, take a small input in your mind that let's see for n is equal to 4.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=503s"
+    },
+    {
+        "chunk_id": 37,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 510.54,
+        "end": 520.22,
+        "text": "First of all, take a small input in your mind that let's see for n is equal to 4. Let's see for n is equal to 5. It will be increased. Let's see for 4. This recursion will work for 4.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=510s"
+    },
+    {
+        "chunk_id": 38,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 518.86,
+        "end": 523.88,
+        "text": "This recursion will work for 4. Okay. Good. So, see. Now, you have to write the step slowly.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=518s"
+    },
+    {
+        "chunk_id": 39,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 522.28,
+        "end": 532.34,
+        "text": "Now, you have to write the step slowly. First of all, you will make a dp array. What array will you make? dp. 1, 2, 3, 0, 1, 2, 3, 4.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=522s"
+    },
+    {
+        "chunk_id": 40,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 528.0,
+        "end": 538.5,
+        "text": "1, 2, 3, 0, 1, 2, 3, 4. This size of a dp array is made. Okay. In the beginning, there is sub-1. In the beginning, there is sub-1.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=528s"
+    },
+    {
+        "chunk_id": 41,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 537.1,
+        "end": 546.44,
+        "text": "In the beginning, there is sub-1. In the beginning, there is sub-1. This is your DP array, right? Okay, in the beginning, it is all minus 1. Now, you have to see one thing, right?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=537s"
+    },
+    {
+        "chunk_id": 42,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 544.84,
+        "end": 558.7,
+        "text": "Now, you have to see one thing, right? That this array, your recursion function, in which order your recursion function, in which order your values are filling in this DP array? Your recursion function,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=544s"
+    },
+    {
+        "chunk_id": 43,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 556.94,
+        "end": 572.02,
+        "text": "Your recursion function, in which order your values are filling in this DP array? And to fill in any one value in it, i.e. to fill in any one value in DP, What are the things that are being used to fill in the DPA?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=556s"
+    },
+    {
+        "chunk_id": 44,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 569.02,
+        "end": 578.02,
+        "text": "What are the things that are being used to fill in the DPA? What are the things that are being used? You will have to note that down. What does it mean to say? We will clear it for you now.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=569s"
+    },
+    {
+        "chunk_id": 45,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 576.02,
+        "end": 586.02,
+        "text": "We will clear it for you now. In the beginning, DPA is minus 1. But if you want, then you can write the value of the base case in DPA. Look, what is DPA?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=576s"
+    },
+    {
+        "chunk_id": 46,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 585.02,
+        "end": 593.02,
+        "text": "Look, what is DPA? DPA is the answer. DPA says that if N is 0, then its answer will be this. If N is 2, then its answer will be this.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=585s"
+    },
+    {
+        "chunk_id": 47,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 591.02,
+        "end": 627.72,
+        "text": "If N is 2, then its answer will be this. If N is 4, then its answer will be this. What do you want in the last? You want this value in the last value of dp of 4. This is what you want in the last. So, look, in the beginning, all are minus 1, but if you want, then you can put the answer of base case in dp. Base case means, what is the answer of n is equal to 0? You know that it is 0, right? Yes, I know. The answer of n is equal to 1, do you know or not? I know, it is 1. So, you can put these two in dp. So, put them. So, you put these two in dp. So, we call these two 0 and 1. Now, remember,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=591s"
+    },
+    {
+        "chunk_id": 48,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 598.02,
+        "end": 635.02,
+        "text": "value of dp of 4. This is what you want in the last. So, look, in the beginning, all are minus 1, but if you want, then you can put the answer of base case in dp. Base case means, what is the answer of n is equal to 0? You know that it is 0, right? Yes, I know. The answer of n is equal to 1, do you know or not? I know, it is 1. So, you can put these two in dp. So, put them. So, you put these two in dp. So, we call these two 0 and 1. Now, remember, First of all, what did you fill? Which slot did you fill in DP? First of all, DP of 0. It was filled.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=598s"
+    },
+    {
+        "chunk_id": 49,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 634.84,
+        "end": 638.8,
+        "text": "It was filled. From whom? From 0. You filled it yourself. We know it from the base case.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=634s"
+    },
+    {
+        "chunk_id": 50,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 638.3,
+        "end": 645.8,
+        "text": "We know it from the base case. Okay. Next, DP of 1 is equal to 1. These two were filled in the first. Rest of them are minus 1.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=638s"
+    },
+    {
+        "chunk_id": 51,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 645.0,
+        "end": 655.08,
+        "text": "Rest of them are minus 1. Rest of them are minus 1. Now you have to see how recursion fills your DP. How recursion puts value in it. Come, let's see.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=645s"
+    },
+    {
+        "chunk_id": 52,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 654.26,
+        "end": 675.86,
+        "text": "Come, let's see. Come, let's see. Let's run recursion. Let's run the recursion dry run. Let's understand what is happening in the recursion, what is happening in the real, see. First of all, the recursion will be called for n is equal to 4. The function of the lead code will call for n is equal to 4 only. Now, this is not the base case. Do you know the answer of n is equal to 4? No, you don't know the answer of n is equal to 4 now because it is minus 1.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=654s"
+    },
+    {
+        "chunk_id": 53,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 667.86,
+        "end": 685.88,
+        "text": "Now, this is not the base case. Do you know the answer of n is equal to 4? No, you don't know the answer of n is equal to 4 now because it is minus 1. So, you will have to call further recursion. So, what will you do? dp of 4 is equal to, you will call fun of 3 plus fun of 2.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=667s"
+    },
+    {
+        "chunk_id": 54,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 681.4,
+        "end": 693.14,
+        "text": "you will call fun of 3 plus fun of 2. This will be it, right? What does this line mean? Return dpn is equal to fun of n minus 1 plus fun of n minus 2. This line means that",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=681s"
+    },
+    {
+        "chunk_id": 55,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 692.1,
+        "end": 698.24,
+        "text": "This line means that dp of 4 is equal to fun of 3, whatever answer comes, plus fun of 2, whatever answer comes.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=692s"
+    },
+    {
+        "chunk_id": 56,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 697.64,
+        "end": 701.74,
+        "text": "whatever answer comes. Okay? Come. Call fun of 3. Call fun of 3.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=697s"
+    },
+    {
+        "chunk_id": 57,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 701.3,
+        "end": 709.74,
+        "text": "Call fun of 3. Fun n is equal to 3. Here also, the same thing will happen. neither n is equal to 3 is the base case, nor you know the answer of n is equal to 3.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=701s"
+    },
+    {
+        "chunk_id": 58,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 707.7,
+        "end": 713.26,
+        "text": "nor you know the answer of n is equal to 3. No, you don't know. It's minus 1. You don't know. Same thing will happen here too. What will happen?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=707s"
+    },
+    {
+        "chunk_id": 59,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 712.86,
+        "end": 720.22,
+        "text": "What will happen? So, here also you will say, okay, now we don't know. So, we will say, dp of 3 is equal to",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=712s"
+    },
+    {
+        "chunk_id": 60,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 717.66,
+        "end": 726.68,
+        "text": "dp of 3 is equal to fun of 2 plus fun of 1. Good thing. Run fun of 2. Run fun of 2.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=717s"
+    },
+    {
+        "chunk_id": 61,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 726.2,
+        "end": 734.0,
+        "text": "Run fun of 2. Fun n is equal to 2. Here also same problem. Neither n is equal to 2 is the base case, nor you know the answer of n is equal to 2.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=726s"
+    },
+    {
+        "chunk_id": 62,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 732.6,
+        "end": 750.88,
+        "text": "nor you know the answer of n is equal to 2. If you know, it doesn't mean that it is in your DPR, the same thing will happen here as well. So, you will say that dp of 2 is equal to fun of, fun of what? n is equal to 1 plus fun of n is equal to 0. This will happen, this will happen, n is equal to is the same, till now everything is clear,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=732s"
+    },
+    {
+        "chunk_id": 63,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 748.26,
+        "end": 759.4,
+        "text": "This will happen, this will happen, n is equal to is the same, till now everything is clear, till now we have not told you anything new. Okay. Now, listen very carefully. n is equal to 1, n is equal to 1, what is the answer to n is equal to 1?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=748s"
+    },
+    {
+        "chunk_id": 64,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 756.12,
+        "end": 769.72,
+        "text": "n is equal to 1, n is equal to 1, what is the answer to n is equal to 1? Do you know the answer to n is equal to 1 from the beginning? Like, yes, you know, what do you know? The answer of n is equal to 1, you know that it is 1. You know that it is 1.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=756s"
+    },
+    {
+        "chunk_id": 65,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 768.62,
+        "end": 780.22,
+        "text": "You know that it is 1. So, in one way, we can write that if we call this, its value is same as dp of 1. Okay? Plus, you know the answer of n is equal to 0,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=768s"
+    },
+    {
+        "chunk_id": 66,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 777.84,
+        "end": 785.6,
+        "text": "Plus, you know the answer of n is equal to 0, it is written in your dp array. What happens? It becomes 0. Plus, dp of 0.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=777s"
+    },
+    {
+        "chunk_id": 67,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 783.28,
+        "end": 794.04,
+        "text": "Plus, dp of 0. Plus, dp of 0. Has the work of n is equal to 2 been done? Yes. Now, in your DP array, you are going to fill one thing for the first time.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=783s"
+    },
+    {
+        "chunk_id": 68,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 789.96,
+        "end": 803.56,
+        "text": "Now, in your DP array, you are going to fill one thing for the first time. Which value? We are going to fill dp of 2. What is the value of dp of 2 ultimately? dp of 1 plus dp of 0.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=789s"
+    },
+    {
+        "chunk_id": 69,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 801.28,
+        "end": 813.94,
+        "text": "dp of 1 plus dp of 0. Now, what will it do? What will it fill in dp of 2? 1 plus 0 is equal to 1. Meaning, dp of 2 has changed from 1.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=801s"
+    },
+    {
+        "chunk_id": 70,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 810.46,
+        "end": 820.74,
+        "text": "Meaning, dp of 2 has changed from 1. Write this. What did you fill in the third? dp of 2. How to fill dp of 2?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=810s"
+    },
+    {
+        "chunk_id": 71,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 819.14,
+        "end": 830.24,
+        "text": "How to fill dp of 2? What to use to fill? dp of 1 plus dp of 0. This is what we did in recursion. We are writing here that what does recursion do?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=819s"
+    },
+    {
+        "chunk_id": 72,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 827.78,
+        "end": 838.72,
+        "text": "We are writing here that what does recursion do? What is recursion doing in reality? Recursion, what is it doing? How is it filling dp of r? It must be doing something by which dp of r is filling.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=827s"
+    },
+    {
+        "chunk_id": 73,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 836.88,
+        "end": 843.3,
+        "text": "It must be doing something by which dp of r is filling. Recursion is doing this. Good thing. Come back. n is equal to 2 is over.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=836s"
+    },
+    {
+        "chunk_id": 74,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 841.78,
+        "end": 848.12,
+        "text": "n is equal to 2 is over. n is equal to 2 is over. n is equal to 3. Come back. Now see.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=841s"
+    },
+    {
+        "chunk_id": 75,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 847.64,
+        "end": 855.96,
+        "text": "Now see. fun 2 se kuch na kuch answer aya hoga fun 2 se kuch na kuch to answer aya hoga fun 2 se kuch na kuch answer aya hoga jo ki",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=847s"
+    },
+    {
+        "chunk_id": 76,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 855.18,
+        "end": 861.06,
+        "text": "jo ki ab dp of 2 me bhi likha ja chuka hai isko ham bol sakte hai ki ye dp of 2 ban chuka hai plus",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=855s"
+    },
+    {
+        "chunk_id": 77,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 860.66,
+        "end": 865.7,
+        "text": "plus fun of 1 fun of 1 again kya hai base case fun of 1 base case hai",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=860s"
+    },
+    {
+        "chunk_id": 78,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 864.64,
+        "end": 869.2,
+        "text": "fun of 1 base case hai fun of 1 ka answer abko malum hai kya hai dp of 1 isko likh dijiye",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=864s"
+    },
+    {
+        "chunk_id": 79,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 868.2,
+        "end": 874.14,
+        "text": "isko likh dijiye dp of 1 ab dekhiye ab dekhiye fun of n is equal to 3 me bhi lo khade hai",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=868s"
+    },
+    {
+        "chunk_id": 80,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 872.16,
+        "end": 882.7,
+        "text": "fun of n is equal to 3 me bhi lo khade hai kaunsa dp ka slot bharaja raha hai dp of 3 bharaja raha hai kis se bharaja raha hai dp of 2 plus dp of 1",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=872s"
+    },
+    {
+        "chunk_id": 81,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 880.18,
+        "end": 889.68,
+        "text": "dp of 2 plus dp of 1 matlab ki answer iska aega 2 yaha pe aake likh dega 2 again likhye chauthhe number pe kya bharagaya",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=880s"
+    },
+    {
+        "chunk_id": 82,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 887.74,
+        "end": 898.0,
+        "text": "chauthhe number pe kya bharagaya dp of 3 is equal to kaise bharagaya kis value use karke bharagaya bhai dp of 2 plus dp of 1",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=887s"
+    },
+    {
+        "chunk_id": 83,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 896.16,
+        "end": 905.4,
+        "text": "plus dp of 1 yes yes yes dp of 1 very good n is equal to 3 ka bhi kaam hogaya tamam n is equal to 4 pe wapas aayiye",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=896s"
+    },
+    {
+        "chunk_id": 84,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 903.0,
+        "end": 915.34,
+        "text": "n is equal to 4 pe wapas aayiye fun of 3 is complete and you have filled the answer of fun of 3 write this as dp of 3 its value will remain the same dp of 3 plus fun of 2 is called again",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=903s"
+    },
+    {
+        "chunk_id": 85,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 912.6,
+        "end": 923.98,
+        "text": "plus fun of 2 is called again fun of 2 is called again but when fun of 2 is called then the answer of fun of 2 is already present in dp so no more recursion will take place",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=912s"
+    },
+    {
+        "chunk_id": 86,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 920.96,
+        "end": 932.88,
+        "text": "so no more recursion will take place dp of 2 will be returned directly write this as dp of 2 now see on the 5th number which dp slot are you filling",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=920s"
+    },
+    {
+        "chunk_id": 87,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 929.56,
+        "end": 939.56,
+        "text": "on the 5th number which dp slot are you filling dp of 4 Kis value se dp of 3 plus dp of 2 Matlab ki Yaha pe kya answer aajayega",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=929s"
+    },
+    {
+        "chunk_id": 88,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 938.08,
+        "end": 948.44,
+        "text": "Yaha pe kya answer aajayega 3 aajayega Yaha pe answer aajayega 3 Isko bhi apne list me likh lijiye Last number pe dp of 4 bhara gaya",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=938s"
+    },
+    {
+        "chunk_id": 89,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 945.56,
+        "end": 953.5,
+        "text": "Last number pe dp of 4 bhara gaya Aur iski value kya hui 3 plus dp of 2 Yes Yes",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=945s"
+    },
+    {
+        "chunk_id": 90,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 953.04,
+        "end": 958.7,
+        "text": "Yes Yes Ye karne ke baad Sara cheezain khatam Aur aapka recursion end ho jayega",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=953s"
+    },
+    {
+        "chunk_id": 91,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 957.28,
+        "end": 963.02,
+        "text": "Aur aapka recursion end ho jayega Aapka recursion kya ho jayega End ho jayega Aapka final answer Kahan pe aapko mila hai",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=957s"
+    },
+    {
+        "chunk_id": 92,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 961.84,
+        "end": 973.1,
+        "text": "Kahan pe aapko mila hai Your final answer is this, dp of 4, which is 3. So, what will be your answer? 3. Now, look very carefully. Now, you have written this.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=961s"
+    },
+    {
+        "chunk_id": 93,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 972.12,
+        "end": 978.8,
+        "text": "Now, you have written this. It is not necessary to write this every time. We will think about how to explain it to you. We can think about it even without writing it. You guys write it once.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=972s"
+    },
+    {
+        "chunk_id": 94,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 978.04,
+        "end": 990.2,
+        "text": "You guys write it once. In this order, what is the question? What is the recursion doing? Recursion is doing exactly this. That is why we said, if you understand what the recursion is doing,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=978s"
+    },
+    {
+        "chunk_id": 95,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 986.26,
+        "end": 1000.2,
+        "text": "That is why we said, if you understand what the recursion is doing, then it is very easy to convert it into iterative. What is recursion doing? See, what is recursion doing first? Recursion is making a DP array first.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=986s"
+    },
+    {
+        "chunk_id": 96,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 996.2,
+        "end": 1009.2,
+        "text": "Recursion is making a DP array first. DP array of length n plus 1. Assume n plus 1 because for n is equal to 4, you need 0, 1, 2, 3, 4 type of index. So assume it is of 5 size.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=996s"
+    },
+    {
+        "chunk_id": 97,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1007.2,
+        "end": 1017.2,
+        "text": "So assume it is of 5 size. After that, what is recursion doing first? It is assigning 0 to DP 0. Can you do this? Absolutely.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1007s"
+    },
+    {
+        "chunk_id": 98,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1016.2,
+        "end": 1024.02,
+        "text": "Absolutely. DP of 0 is equal to 0. Here it is semicolon, this is C++, okay? What is the second work doing? DP1 is equal to 1.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1016s"
+    },
+    {
+        "chunk_id": 99,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1022.6,
+        "end": 1031.92,
+        "text": "DP1 is equal to 1. Very good, very good, done. What is the third work doing? DP2 is equal to what? DP1 plus DP0.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1022s"
+    },
+    {
+        "chunk_id": 100,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1030.52,
+        "end": 1040.24,
+        "text": "DP1 plus DP0. Meaning? Meaning? DP2 is equal to DP1 plus DP0. What is the next work doing? DP3 is equal to DP2 plus DP1.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1030s"
+    },
+    {
+        "chunk_id": 101,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1037.86,
+        "end": 1047.14,
+        "text": "DP3 is equal to DP2 plus DP1. Is a pattern noticing you? Is a pattern noticing you? Is it noticing us? Which pattern is it noticing us?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1037s"
+    },
+    {
+        "chunk_id": 102,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1045.84,
+        "end": 1055.28,
+        "text": "Which pattern is it noticing us? if your n is equal to 4 if n is equal to 4 then do you know what recursion is doing and how you can do this",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1045s"
+    },
+    {
+        "chunk_id": 103,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1053.8,
+        "end": 1062.02,
+        "text": "and how you can do this recursion is doing this for i is equal to 2 i less than is equal to 4 i plus plus",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1053s"
+    },
+    {
+        "chunk_id": 104,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1060.94,
+        "end": 1071.26,
+        "text": "i plus plus and every i dp of i is equal to dp of 2 is equal to what dp of 1 plus dp of 0",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1060s"
+    },
+    {
+        "chunk_id": 105,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1068.92,
+        "end": 1079.38,
+        "text": "dp of 1 plus dp of 0 means dp of i is equal to dp of i minus 1 plus dp of i minus 2.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1068s"
+    },
+    {
+        "chunk_id": 106,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1076.92,
+        "end": 1087.16,
+        "text": "plus dp of i minus 2. Yes, yes. Exactly the same thing. Exactly the same thing your recursion is doing line by line.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1076s"
+    },
+    {
+        "chunk_id": 107,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1084.52,
+        "end": 1096.02,
+        "text": "your recursion is doing line by line. We have proved what recursion is doing. Recursion is doing exactly the same thing. Once you have clear what recursion is doing,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1084s"
+    },
+    {
+        "chunk_id": 108,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1094.36,
+        "end": 1102.36,
+        "text": "what recursion is doing, for that, think of loop. It is a game of children. Recursion is doing the same thing. What did recursion fill first?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1094s"
+    },
+    {
+        "chunk_id": 109,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1100.92,
+        "end": 1121.16,
+        "text": "What did recursion fill first? dp of 0 filled by itself 0. You also fill it. dp of 1, 1 filled, you also fill, after that this game started playing, dp of 2 became dp of 1 plus dp of 0, means dp of i is equal to dp of i minus 1 plus dp of i minus 2, do this work till 4, you will get dp of 4,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1100s"
+    },
+    {
+        "chunk_id": 110,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1113.16,
+        "end": 1157.28,
+        "text": "means dp of i is equal to dp of i minus 1 plus dp of i minus 2, do this work till 4, you will get dp of 4, in the last return dp of 4, that's it, the game is over, this work is doing recursion, you also can do this work, what is the need of recursion for this, whatever you are doing, do it, write it like this, write it like this, What do you have to write? Look. Write this. What will you get in the lead code? You will only get n. Int lead code. What will you get? Int n. Okay. What is your work? First of all, a vector of int dp. How much size? n plus 1 size. Now what did recursion do in the beginning? dp of 0 is equal to 0",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1113s"
+    },
+    {
+        "chunk_id": 111,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1153.62,
+        "end": 1162.86,
+        "text": "dp of 0 is equal to 0 dp of yes, do one more thing that here write that if",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1153s"
+    },
+    {
+        "chunk_id": 112,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1160.92,
+        "end": 1168.02,
+        "text": "write that if n equal equal to 0 or n equal equal to 1 return n because it is possible",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1160s"
+    },
+    {
+        "chunk_id": 113,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1167.42,
+        "end": 1171.48,
+        "text": "because it is possible that n 0 1 so do it for that return n this is done",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1167s"
+    },
+    {
+        "chunk_id": 114,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1170.98,
+        "end": 1175.44,
+        "text": "this is done one line's work now dp 0 is equal to 0 recursion was also done",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1170s"
+    },
+    {
+        "chunk_id": 115,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1174.6,
+        "end": 1180.08,
+        "text": "recursion was also done dp 1 is equal to 1 recursion was also done now dp what was done brother",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1174s"
+    },
+    {
+        "chunk_id": 116,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1179.54,
+        "end": 1185.56,
+        "text": "brother for int i is equal to 2 0 1 is done",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1179s"
+    },
+    {
+        "chunk_id": 117,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1184.38,
+        "end": 1189.36,
+        "text": "0 1 is done from 2 i less than equal to n i plus plus",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1184s"
+    },
+    {
+        "chunk_id": 118,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1187.96,
+        "end": 1193.54,
+        "text": "i plus plus and what did you do dp of i is equal to",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1187s"
+    },
+    {
+        "chunk_id": 119,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1192.52,
+        "end": 1197.54,
+        "text": "is equal to dp of i minus 1 plus dp of i",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1192s"
+    },
+    {
+        "chunk_id": 120,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1196.34,
+        "end": 1201.04,
+        "text": "dp of i minus 2 finished where was the answer of recursion stored",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1196s"
+    },
+    {
+        "chunk_id": 121,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1200.42,
+        "end": 1204.82,
+        "text": "of recursion stored in dp of 4 means what do you have to return what do you have to do",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1200s"
+    },
+    {
+        "chunk_id": 122,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1203.8,
+        "end": 1208.88,
+        "text": "what do you have to do dp of n take this this code",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1203s"
+    },
+    {
+        "chunk_id": 123,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1207.74,
+        "end": 1237.76,
+        "text": "this code what is said in english tabulation Tabulation. Why is this code called tabulation? Because the work that Recursion was doing, you did that work yourself without Recursion, with the help of a simple loop. How to write this loop? How did you understand? When you see Recursion and ask Recursion, what are you doing? What does it mean to do? In which order are you filling the dp array and what are you using to fill the dp array?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1207s"
+    },
+    {
+        "chunk_id": 124,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1230.76,
+        "end": 1259.76,
+        "text": "In which order are you filling the dp array and what are you using to fill the dp array? If you get to know that once you click on it, you write it here, then it is a very basic problem to change it in the loop. This will be told to you by a 10 class student. What is called this transformation? Tabulation. It is not complete yet, there is one more thing left in it, he is fine, he will tell you now. But you will also have a doubt in your mind that when tabulation was so easy to do,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1230s"
+    },
+    {
+        "chunk_id": 125,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1254.76,
+        "end": 1269.76,
+        "text": "But you will also have a doubt in your mind that when tabulation was so easy to do, So, why did you study recursive from day 1? If we had not taught you recursive, if you had not understood memoization, if you had not understood this dry run, then how would you have written this?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1254s"
+    },
+    {
+        "chunk_id": 126,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1268.76,
+        "end": 1275.76,
+        "text": "then how would you have written this? How would you have written this? How would you have written this? How would you have managed this? In FIMO Naki, you would have thought that it would have been very easy to teach this only.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1268s"
+    },
+    {
+        "chunk_id": 127,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1272.76,
+        "end": 1290.76,
+        "text": "In FIMO Naki, you would have thought that it would have been very easy to teach this only. But in complex problem, until you understand recursion, you cannot write the tabulation. Because tabulation is based on the fact that you are understanding recursion, You will not be able to write the correct tabulation until you get to know the correct tabulation.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1272s"
+    },
+    {
+        "chunk_id": 128,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1285.76,
+        "end": 1301.76,
+        "text": "You will not be able to write the correct tabulation until you get to know the correct tabulation. Whatever is reminding you to do this in the tabulation is wrong. Recursion is the base. When you will not be able to understand the recursion, you will not be able to do anything in the tabulation. This is what we are telling you frankly.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1285s"
+    },
+    {
+        "chunk_id": 129,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1299.76,
+        "end": 1312.76,
+        "text": "This is what we are telling you frankly. Now you must be getting a picture that this happened in the recursion and this happened in the tabulation. There is one more improvement in this which should also be done in the tabulation. We will tell you that now. But we hope that you have understood this whole process.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1299s"
+    },
+    {
+        "chunk_id": 130,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1309.76,
+        "end": 1323.76,
+        "text": "But we hope that you have understood this whole process. That how recursion is analyzed. An order is shown in which order the DPRA is filling. What is being used to fill the DPRA? There must be something that is being used.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1309s"
+    },
+    {
+        "chunk_id": 131,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1321.76,
+        "end": 1331.76,
+        "text": "There must be something that is being used. From that, take out a pattern and write it in the form of a loop. This is called tabulation. Come forward, we will tell you one more interesting thing. Now listen to one more thing.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1321s"
+    },
+    {
+        "chunk_id": 132,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1329.76,
+        "end": 1340.76,
+        "text": "Now listen to one more thing. This is very important. This is called space optimization. We have seen very few people studying this. We learned this from Stryver ji, I mean we are honestly saying that we learned this from him.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1329s"
+    },
+    {
+        "chunk_id": 133,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1336.76,
+        "end": 1354.76,
+        "text": "We learned this from Stryver ji, I mean we are honestly saying that we learned this from him. Very few people tell this thing, but this is a very important thing. See, this was your iterative approach of tabulation. You will run it, it will be submitted, there is no problem, it will be submitted comfortably. But there is a small problem in this, what is the problem, we will show you now.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1336s"
+    },
+    {
+        "chunk_id": 134,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1350.76,
+        "end": 1369.8,
+        "text": "But there is a small problem in this, what is the problem, we will show you now. What are you doing, we will tell you. See, you make a dp array of n plus 1 size. After that you write dp 0 as 0 and dp 1 as 1, it is good, do it. After that, you run the loop from 2 to n, and for dPi, dPi-1, whatever the value is,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1350s"
+    },
+    {
+        "chunk_id": 135,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1364.76,
+        "end": 1376.1,
+        "text": "After that, you run the loop from 2 to n, and for dPi, dPi-1, whatever the value is, you are adding dPi-2 and giving your answer. In the end, what are you returning? You are returning dPn. Okay.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1364s"
+    },
+    {
+        "chunk_id": 136,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1375.08,
+        "end": 1384.38,
+        "text": "Okay. Let me tell you something. Suppose n is equal to 5. n is equal to 5, okay? You will make an array like this.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1375s"
+    },
+    {
+        "chunk_id": 137,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1382.86,
+        "end": 1397.78,
+        "text": "You will make an array like this. 5 plus 1 is a type of array. 1, 2, 3, 0, 1, 2, 3, 4, and 5. You have made an array of this size. Now let's see, first of all you write 0 and 1 here, you have used dp of 0 and 1.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1382s"
+    },
+    {
+        "chunk_id": 138,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1393.08,
+        "end": 1419.36,
+        "text": "Now let's see, first of all you write 0 and 1 here, you have used dp of 0 and 1. Tell me one thing, what do you need to get dp of 2? Now if you get dp of 2, 3, 4, 5, then what do you need to get dp of 2 according to this formula? dp of i minus 1 plus i minus 2, means you need dp of 0 and dp of 1 to get dp of 2. Once dp of 2 is taken, then you will go to 3.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1393s"
+    },
+    {
+        "chunk_id": 139,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1417.58,
+        "end": 1429.92,
+        "text": "Once dp of 2 is taken, then you will go to 3. Now what do you need to get dp of 3? You need dp of 2 and dp of 1. This is it, right? This is what happens, right?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1417s"
+    },
+    {
+        "chunk_id": 140,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1429.14,
+        "end": 1439.3,
+        "text": "This is what happens, right? Okay. And next, you will also get dp of 4. To get dp of 4, you need two things. You will need dp of 3 and you will also need dp of 2.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1429s"
+    },
+    {
+        "chunk_id": 141,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1435.64,
+        "end": 1449.3,
+        "text": "You will need dp of 3 and you will also need dp of 2. Okay. dp of 5, which is your final answer, what will you need for that? For that, you will need dp of 4 and dp of 3. This is it.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1435s"
+    },
+    {
+        "chunk_id": 142,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1448.74,
+        "end": 1492.6,
+        "text": "This is it. And in the last, you will get dp of 5 as your answer. This is what you are doing in the loop, you are still not getting it right, now tell us one thing, to get dp of 2, dp of 0 and dp of 1 was needed, okay, okay, good thing, to get dp of 3, dp of 2 and dp of 1 is needed, is dp of 3 needed to get dp of 0, no, no, once dp of 2 is done, its value comes, x comes, assume anything, After that, when you come to dp of 3, you don't need dp of 0, you just need dp of 2 and dp of 1. For dp of 4, do you need dp of 1? No.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1448s"
+    },
+    {
+        "chunk_id": 143,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1487.6,
+        "end": 1515.6,
+        "text": "For dp of 4, do you need dp of 1? No. For dp of 4, do you need dp of 0? No. For dp of 4, you only need dp of 3, which you have just taken out, and dp of 2, which you took out one step earlier. For dp of 5, you only needed two things, which you took out now and which you took out before this. For dp of 5, you don't need dp of 0, dp of 1, dp of 2.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1487s"
+    },
+    {
+        "chunk_id": 144,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1510.6,
+        "end": 1530.28,
+        "text": "For dp of 5, you don't need dp of 0, dp of 1, dp of 2. So tell me one thing, when you need only two old values to take out one value, how many? Only two old values are required. means if you are taking out dp of 5 what is the value you need?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1510s"
+    },
+    {
+        "chunk_id": 145,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1528.3,
+        "end": 1537.76,
+        "text": "what is the value you need? only dp of 4 and dp of 3 before that, whatever has come it does not matter you will not understand this small input",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1528s"
+    },
+    {
+        "chunk_id": 146,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1536.12,
+        "end": 1546.7,
+        "text": "you will not understand this small input but imagine that n is 100 so you see that n is equal to 100 to take out dp of 100 you will need only",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1536s"
+    },
+    {
+        "chunk_id": 147,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1544.6,
+        "end": 1554.12,
+        "text": "you will need only dp of 99 and dp of 98 before that, what is there in 0 to 97 in the array",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1544s"
+    },
+    {
+        "chunk_id": 148,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1552.98,
+        "end": 1573.12,
+        "text": "in the array So, when you don't care about the last value, when you don't need the entire array, why are we storing the entire array? Why are we storing the entire array? Every time, you only need the value of the last value after the last value. That's it. You only need two values of the last.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1552s"
+    },
+    {
+        "chunk_id": 149,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1571.12,
+        "end": 1586.12,
+        "text": "That's it. You only need two values of the last. Meaning, you only need the two values of the recent. You only need that. It doesn't matter what is written in the remaining array. So when there is no difference, then where are we sitting with so much space?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1571s"
+    },
+    {
+        "chunk_id": 150,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1581.12,
+        "end": 1605.12,
+        "text": "So when there is no difference, then where are we sitting with so much space? What will we do with so much space? There is no plot. Why are we sitting? We will do space optimization in this. What space optimization will we do? See, every time, every time, what do you need? Previous value means previous value and its previous value also means previous previous.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1581s"
+    },
+    {
+        "chunk_id": 151,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1601.12,
+        "end": 1622.26,
+        "text": "and its previous value also means previous previous. Only two are required, right? When you are on 2, when you are taking out dp of 2, What do you need? First, you need the previous one, which is dp of 1, and the previous one, which is dp of 0. This is what you need, right? So, what you are doing here, you are making an array, and dp 0 is 0, and dp 1 is 1.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1601s"
+    },
+    {
+        "chunk_id": 152,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1616.64,
+        "end": 1635.82,
+        "text": "So, what you are doing here, you are making an array, and dp 0 is 0, and dp 1 is 1. Don't make an array for this. Just take two variables for this. What we want to say is, you can do this. See, it is a very simple thing. You have come. After that, what have you done? You have done this. Int. Previous. Previous.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1616s"
+    },
+    {
+        "chunk_id": 153,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1632.8,
+        "end": 1669.18,
+        "text": "Int. Previous. Previous. Previous means your computation has to start from dp of 2, which is your loop, you know the answer of 0 and 1, for 2, what is previous, just before that, 1, 1, 1, so if in previous, whatever work you wanted to write in dp of 1, what did you want to write, 1, store it in previous, the game is over, and int, previous, previous, means one more before, so for dp of 2, previous ho gaya 1 dp of 2 ke liye previous ka previous kya hua",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1632s"
+    },
+    {
+        "chunk_id": 154,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1667.74,
+        "end": 1673.4,
+        "text": "previous ka previous kya hua dp of 0 to jo bhi value aap dp of 0 me rakhna chaate the na 0",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1667s"
+    },
+    {
+        "chunk_id": 155,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1672.66,
+        "end": 1679.08,
+        "text": "0 usko yaha pe rakh dijiye usko yaha pe rakh dijiye usko yaha pe rakh ke khatam ho gaya khel",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1672s"
+    },
+    {
+        "chunk_id": 156,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1677.66,
+        "end": 1684.78,
+        "text": "khatam ho gaya khel ab dekhiye kya trick karenge ab dekhiye am kya khel karte hain for int",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1677s"
+    },
+    {
+        "chunk_id": 157,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1683.1,
+        "end": 1690.2,
+        "text": "int i is equal to 2 i less than equal to n i plus plus theek hai",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1683s"
+    },
+    {
+        "chunk_id": 158,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1689.38,
+        "end": 1694.92,
+        "text": "theek hai ab aap kya kiye the ab aap kya kiye the dp of i is equal to dp of i minus 1",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1689s"
+    },
+    {
+        "chunk_id": 159,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1693.9,
+        "end": 1745.0,
+        "text": "dp of i minus 1 plus dp of i minus 2, dp is not there, we are saying that we have not made an array, there is no dp array, so see, what do you want to get the answer, make an answer variable, answer is equal to, what do you want, previous plus previous of previous, add those two, this is what dp array meant, this is what dp of 2 answer used to come, dp of 1 plus dp of 0, we said that before starting, in previous, in a way, dp of 1, assume that it is here, previous, previous, in a way, dp of 1, zero hai toh iska answer kya aega previous plus previous of previous okay very good very good answer aage answer aage aapka dp of two solve ho gaya lekin lekin iska answer to aage aap dp of three kaise nika liye ga dp of three ke liye kya do cheeze chahiye dp of three ke liye chahiye uska",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1693s"
+    },
+    {
+        "chunk_id": 160,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1739.8,
+        "end": 1759.26,
+        "text": "three kaise nika liye ga dp of three ke liye kya do cheeze chahiye dp of three ke liye chahiye uska ek previous uska ek previous jo ki up dp of two ko hona padega aur uska previous ka previous jo ki dp of 1 ko hona padega. Matlab ki, ek baar aap answer nikal liye, ek baar aap answer nikal liye",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1739s"
+    },
+    {
+        "chunk_id": 161,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1757.38,
+        "end": 1767.3,
+        "text": "nikal liye, ek baar aap answer nikal liye yahape. Answer is ka nikal gaya, previous plus previous previous. Very good. Ab aapko values ko thoda change karna padega. Abhi tak, abhi tak,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1757s"
+    },
+    {
+        "chunk_id": 162,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1765.98,
+        "end": 1775.24,
+        "text": "Abhi tak, abhi tak, abhi tak, aapka jo previous ya previous hai, previous ka previous, wo betha hua hai, dp of 0 leke. Wo abhi, abhi shuru",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1765s"
+    },
+    {
+        "chunk_id": 163,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1773.52,
+        "end": 1808.62,
+        "text": "0 leke. Wo abhi, abhi shuru karne bhi, dp of 0 ke betha hua hai. Previous kis pe betha hua hai? dp of 1 pe. In the beginning, we were talking about the beginning, you had decided that this will happen, you have now taken out the answer, this answer, by combining previous and previous previous, your answer in one way, what is it now, dp of 2, now you have to take out dp of 3 the next time, dp of 3 needs which two values, dp of 2 plus dp of 1, this was the equation,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1773s"
+    },
+    {
+        "chunk_id": 164,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1781.06,
+        "end": 1816.66,
+        "text": "In the beginning, we were talking about the beginning, you had decided that this will happen, you have now taken out the answer, this answer, by combining previous and previous previous, your answer in one way, what is it now, dp of 2, now you have to take out dp of 3 the next time, dp of 3 needs which two values, dp of 2 plus dp of 1, this was the equation, What will be Dp of 2? Previous And Dp of 1 means Previous",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1781s"
+    },
+    {
+        "chunk_id": 165,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1815.62,
+        "end": 1825.7,
+        "text": "Previous Previous So now what to do? Previous previous value Previous previous value",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1815s"
+    },
+    {
+        "chunk_id": 166,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1820.84,
+        "end": 1829.3,
+        "text": "Previous previous value Previous previous Previous previous Previous previous Last too",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1820s"
+    },
+    {
+        "chunk_id": 167,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1829.2,
+        "end": 1834.1,
+        "text": "Last too Leave it 2 Equal to previous See this What will happen due to this?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1829s"
+    },
+    {
+        "chunk_id": 168,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1833.36,
+        "end": 1845.68,
+        "text": "What will happen due to this? What value comes in your previous previous? Dp of 1 And what do you want in previous? dp of 2 which you have just taken out in answer.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1833s"
+    },
+    {
+        "chunk_id": 169,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1843.58,
+        "end": 1856.6,
+        "text": "dp of 2 which you have just taken out in answer. Means previous is equal to answer. See this. Your work is done. Now when you will run this loop again.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1843s"
+    },
+    {
+        "chunk_id": 170,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1853.64,
+        "end": 1865.3,
+        "text": "Now when you will run this loop again. Now i is equal to 2 is done. When you will run i is equal to 3. You will do the same thing again. Answer is equal to previous.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1853s"
+    },
+    {
+        "chunk_id": 171,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1863.38,
+        "end": 1874.32,
+        "text": "Answer is equal to previous. which was dp of 2 plus previous previous which was dp of 1 you will get dp of 3",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1863s"
+    },
+    {
+        "chunk_id": 172,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1872.12,
+        "end": 1881.02,
+        "text": "you will get dp of 3 answer go to 4, same thing will happen see, before starting we stored 2 things",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1872s"
+    },
+    {
+        "chunk_id": 173,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1879.42,
+        "end": 1889.22,
+        "text": "we stored 2 things previous, its previous here we wrote what we had to write in dp of 0 in previous we wrote what we had to write in dp of 1",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1879s"
+    },
+    {
+        "chunk_id": 174,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1888.0,
+        "end": 1901.66,
+        "text": "what we had to write in dp of 1 now we started running our loop every time we get our answer After taking out the answers, we shift them one by one. What do we do?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1888s"
+    },
+    {
+        "chunk_id": 175,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1900.66,
+        "end": 1912.66,
+        "text": "What do we do? Previous, previous, you become DP of 1. Previous, you become the answer. Next time, do the same thing. Do the dry run of it.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1900s"
+    },
+    {
+        "chunk_id": 176,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1911.66,
+        "end": 1919.66,
+        "text": "Do the dry run of it. You will understand more. But we have explained as much as we knew. Why did this happen with this work? Why did you put so much mind into it?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1911s"
+    },
+    {
+        "chunk_id": 177,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1917.66,
+        "end": 1928.66,
+        "text": "Why did you put so much mind into it? Now, what is the space complexity of this program? Are you using any extra space? No, we are not. How much?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1917s"
+    },
+    {
+        "chunk_id": 178,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1927.66,
+        "end": 1936.66,
+        "text": "How much? We are using the order of one space. The array that you were using earlier, such a big array, you were using the array in recursion as well,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1927s"
+    },
+    {
+        "chunk_id": 179,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1934.66,
+        "end": 1942.66,
+        "text": "you were using the array in recursion as well, you were still using it, but in this way, you see what we actually need. We don't need the entire array.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1934s"
+    },
+    {
+        "chunk_id": 180,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1940.66,
+        "end": 1950.66,
+        "text": "We don't need the entire array. We only need the last two values. We only need the last two values. So, if we need the last two values, keep adjusting the last two values",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1940s"
+    },
+    {
+        "chunk_id": 181,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1948.66,
+        "end": 1958.66,
+        "text": "keep adjusting the last two values keep adjusting and keep using the variables for that, what is the need to maintain the whole array in this way, your space complexity order of 1 means",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1948s"
+    },
+    {
+        "chunk_id": 182,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1956.66,
+        "end": 1966.66,
+        "text": "order of 1 means constant space, in this no space is being used extra and time complexity order of n and order of 1",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1956s"
+    },
+    {
+        "chunk_id": 183,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1964.66,
+        "end": 1974.66,
+        "text": "order of n and order of 1 this is your time and space that's why I told you that in 90% of problems tabulation will finish your space what is this called?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1964s"
+    },
+    {
+        "chunk_id": 184,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1972.66,
+        "end": 1991.66,
+        "text": "what is this called? space optimization Do we need the whole dp array? No, we just need the last two values. So, keep moving the last two values in the variable here and there. Why do you have to maintain such a big array?",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1972s"
+    },
+    {
+        "chunk_id": 185,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 1987.66,
+        "end": 2005.66,
+        "text": "Why do you have to maintain such a big array? So, what is this called? Tabulation with space optimization. That is why we told you that realistically speaking, tabulation is considered good with memoization. That is why it is considered good because in memoization, recursion is called.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=1987s"
+    },
+    {
+        "chunk_id": 186,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 2001.66,
+        "end": 2016.66,
+        "text": "That is why it is considered good because in memoization, recursion is called. Recursion will be called again and again and again, it takes time. You will have to take space from above. You can't do this trick in recursion, so you will have to take it there. In tabulation, the whole work will be done in one function by running the loop.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=2001s"
+    },
+    {
+        "chunk_id": 187,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 2013.66,
+        "end": 2032.66,
+        "text": "In tabulation, the whole work will be done in one function by running the loop. And if you want, you can use your brain to optimize space. This was the optimized version of Fibonacci. That means if you are asked in an interview, then you will have to tell this. Recursion is fine, recursion memoization is fine, but this should be the target.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=2013s"
+    },
+    {
+        "chunk_id": 188,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 2027.66,
+        "end": 2041.66,
+        "text": "Recursion is fine, recursion memoization is fine, but this should be the target. If you have understood this, then please go and submit it. And we want you to try more problems. Try to write climbing stairs in tabulation. It is the same problem.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=2027s"
+    },
+    {
+        "chunk_id": 189,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 2040.66,
+        "end": 2051.66,
+        "text": "It is the same problem. It is exactly the same problem like Fibonacci. Please go and try to solve the climbing stairs yourself. Otherwise, we will do it in the future. And if there is any difficulty in understanding any part,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=2040s"
+    },
+    {
+        "chunk_id": 190,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 2048.66,
+        "end": 2058.66,
+        "text": "And if there is any difficulty in understanding any part, then please make a big comment. Comment that you did not understand. We will explain this. Because if he does not understand,",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=2048s"
+    },
+    {
+        "chunk_id": 191,
+        "video_id": "yEwnsPI_tUY",
+        "title": "DP in 15 Days Episode 06 : No One Has Explained Tabulation Like This",
+        "language": "en",
+        "start": 2056.66,
+        "end": 2066.66,
+        "text": "Because if he does not understand, then there is no purpose to move forward. So please comment on how it is and how it is not and let's meet the next day. Thank you.",
+        "youtube_url": "https://www.youtube.com/watch?v=yEwnsPI_tUY&t=2056s"
+    }
+]
