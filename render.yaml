@@ -3,7 +3,7 @@ services:
     name: yt-reviser-api
     env: docker
     dockerfilePath: Dockerfile
-    plan: starter
+    plan: free
     healthCheckPath: /api/health
     envVars:
       - key: GROQ_API_KEY
@@ -13,22 +13,22 @@ services:
       - key: EMBEDDING_MODEL
         value: sentence-transformers/all-MiniLM-L6-v2
       - key: WHISPER_MODEL
-        value: small
+        value: tiny
       - key: WHISPER_DEVICE
         value: cpu
       - key: WHISPER_COMPUTE_TYPE
         value: int8
       - key: QDRANT_PATH
-        value: /var/data/qdrant_db
+        value: ./qdrant_db
       - key: MANIFEST_PATH
-        value: /var/data/manifest.json
+        value: ./data/manifest.json
       - key: AUDIO_DIR
-        value: /var/data/audio
+        value: ./data/audio
       - key: TRANSCRIPT_DIR
-        value: /var/data/transcripts
+        value: ./data/transcripts
       - key: CHUNK_DIR
-        value: /var/data/chunks
-    disk:
-      name: reviser-storage
-      mountPath: /var/data
-      sizeGB: 10
+        value: ./data/chunks
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
