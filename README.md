@@ -112,18 +112,7 @@ Copy `.env.example` to `.env` and provide your Groq API key:
 cp .env.example .env
 ```
 
-Edit `.env`:
-```env
-GROQ_API_KEY=gsk_your_groq_api_key_here
-GROQ_MODEL=openai/gpt-oss-120b
-EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
-WHISPER_MODEL=small
-WHISPER_DEVICE=cpu
-WHISPER_COMPUTE_TYPE=int8
-QDRANT_PATH=./qdrant_db
-QDRANT_COLLECTION=yt_reviser
-FRONTEND_ORIGIN=http://localhost:3000
-```
+
 
 ---
 
