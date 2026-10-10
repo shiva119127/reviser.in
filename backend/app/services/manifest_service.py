@@ -119,7 +119,8 @@ class ManifestService:
         with self._lock:
             entry = self._manifest.videos.get(video_id)
             if entry and entry.stage in (VideoStage.FULLY_COMPLETED, VideoStage.UPLOADED_TO_QDRANT) and entry.status == "completed":
-                # Also verify transcript file actually exists
+                if (TRANSCRIPT_DIR / f"{video_id}.json").exists():
+                    return True
                 if entry.transcript_path and Path(entry.transcript_path).exists():
                     return True
             return False

@@ -245,7 +245,11 @@ document.addEventListener("DOMContentLoaded", () => {
             renderAnswer(data);
         } catch (err) {
             console.error("Chat error:", err);
-            askErrorText.textContent = `Error: ${err.message}. Please verify the backend is running.`;
+            if (err.message && err.message.includes("Failed to fetch")) {
+                askErrorText.textContent = "Backend is waking up (Render free tier sleeps after inactivity and takes ~30-40 seconds to spin up). Please check the bottom-left badge: once it turns green (Online), ask again.";
+            } else {
+                askErrorText.textContent = `Error: ${err.message}. Please verify the backend is running.`;
+            }
             askError.classList.remove("hidden");
         } finally {
             askLoading.classList.add("hidden");
@@ -352,7 +356,11 @@ document.addEventListener("DOMContentLoaded", () => {
             renderJobStatus(jobData);
             startJobPolling(activeJobId);
         } catch (err) {
-            alert(`Could not start ingestion: ${err.message}`);
+            if (err.message && err.message.includes("Failed to fetch")) {
+                alert("Backend is waking up (Render free tier sleeps after inactivity and takes ~30-40 seconds to spin up). Please check the bottom-left badge: once it turns green (Online), try again.");
+            } else {
+                alert(`Could not start ingestion: ${err.message}`);
+            }
         } finally {
             btnIngest.disabled = false;
             btnSync.disabled = false;
