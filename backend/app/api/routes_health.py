@@ -7,6 +7,7 @@ from ..config import GROQ_API_KEY, TRANSCRIPT_DIR, CHUNK_DIR
 router = APIRouter(tags=["Health & Status"])
 
 @router.get("/health", response_model=HealthResponse)
+@router.get("/api/health", response_model=HealthResponse)
 def health_check():
     qdrant_service = QdrantService.get_instance()
     points_count = qdrant_service.get_points_count()

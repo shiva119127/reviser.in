@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.venv
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.git
+.gitignore
+.DS_Store
+data/audio/*
+!data/audio/.gitkeep
+qdrant_db/*
+!qdrant_db/.gitkeep

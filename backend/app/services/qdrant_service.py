@@ -33,13 +33,22 @@ class QdrantService:
         collection_name: str = QDRANT_COLLECTION,
     ):
         self.collection_name = collection_name
-        actual_path = path if path is not None else QDRANT_PATH
-        if actual_path == ":memory:":
+        if path is not None:
+            if path == ":memory:":
+                logger.info("Initializing in-memory Qdrant client...")
+                self.client = QdrantClient(":memory:")
+            else:
+                logger.info(f"Initializing Qdrant client at custom path '{path}'...")
+                self.client = QdrantClient(path=path)
+        elif QDRANT_URL:
+            logger.info(f"Initializing Qdrant client with remote cluster '{QDRANT_URL}'...")
+            self.client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY)
+        elif QDRANT_PATH == ":memory:":
             logger.info("Initializing in-memory Qdrant client...")
             self.client = QdrantClient(":memory:")
         else:
-            logger.info(f"Initializing Qdrant client at local path '{actual_path}'...")
-            self.client = QdrantClient(path=actual_path)
+            logger.info(f"Initializing Qdrant client at local path '{QDRANT_PATH}'...")
+            self.client = QdrantClient(path=QDRANT_PATH)
         self._ensure_collection()
 
     @classmethod

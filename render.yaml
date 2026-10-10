@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: yt-reviser-api
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: openai/gpt-oss-120b
+      - key: EMBEDDING_MODEL
+        value: sentence-transformers/all-MiniLM-L6-v2
+      - key: WHISPER_MODEL
+        value: small
+      - key: WHISPER_DEVICE
+        value: cpu
+      - key: WHISPER_COMPUTE_TYPE
+        value: int8
+      - key: QDRANT_PATH
+        value: /var/data/qdrant_db
+      - key: MANIFEST_PATH
+        value: /var/data/manifest.json
+      - key: AUDIO_DIR
+        value: /var/data/audio
+      - key: TRANSCRIPT_DIR
+        value: /var/data/transcripts
+      - key: CHUNK_DIR
+        value: /var/data/chunks
+    disk:
+      name: reviser-storage
+      mountPath: /var/data
+      sizeGB: 10

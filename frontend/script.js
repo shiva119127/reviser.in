@@ -4,9 +4,11 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     // ----------------------------------------------------------------------
-    // CONFIGURATION & GLOBAL STATE
-    // ----------------------------------------------------------------------
-    let API_BASE_URL = (localStorage.getItem("ytReviserApiUrl") || "http://127.0.0.1:8000").replace(/\/+$/, "");
+    let API_BASE_URL = (
+        localStorage.getItem("ytReviserApiUrl") ||
+        (window.YT_REVISER_CONFIG && window.YT_REVISER_CONFIG.apiBaseUrl) ||
+        (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" ? "http://127.0.0.1:8000" : window.location.origin)
+    ).replace(/\/+$/, "");
 
     let currentConversation = null;
     let currentResult = null;
