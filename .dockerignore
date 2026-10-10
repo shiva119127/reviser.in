@@ -12,6 +12,4 @@ __pycache__
 .gitignore
 .DS_Store
 data/audio/*
-!data/audio/.gitkeep
-qdrant_db/*
-!qdrant_db/.gitkeep
+qdrant_db/.lock

@@ -22,8 +22,8 @@ ENV/
 data/audio/*
 !data/audio/.gitkeep
 
-# Vector Database
-qdrant_db/
+# Vector Database (ignore runtime locks only)
+qdrant_db/.lock
 
 # Mac OS & IDE
 .DS_Store

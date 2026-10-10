@@ -1,9 +1,19 @@
 import threading
 from typing import List, Union
 import numpy as np
+import torch
 from sentence_transformers import SentenceTransformer
 from ..config import EMBEDDING_MODEL_NAME, EMBEDDING_DIMENSION
 from ..utils.logger import logger
+
+# Restrict torch memory and thread overhead
+torch.set_grad_enabled(False)
+torch.set_num_threads(1)
+if hasattr(torch, "set_num_interop_threads"):
+    try:
+        torch.set_num_interop_threads(1)
+    except RuntimeError:
+        pass
 
 class EmbeddingService:
     _instance = None
@@ -29,11 +39,12 @@ class EmbeddingService:
 
     def embed_query(self, query: str) -> List[float]:
         """Embed a single query string."""
-        embedding = self.model.encode(
-            query,
-            show_progress_bar=False,
-            normalize_embeddings=True,
-        )
+        with torch.no_grad():
+            embedding = self.model.encode(
+                query,
+                show_progress_bar=False,
+                normalize_embeddings=True,
+            )
         if len(embedding) != EMBEDDING_DIMENSION:
             raise ValueError(
                 f"Generated embedding dimension {len(embedding)} does not match expected {EMBEDDING_DIMENSION}"
@@ -45,12 +56,13 @@ class EmbeddingService:
         if not texts:
             return []
         
-        embeddings = self.model.encode(
-            texts,
-            batch_size=batch_size,
-            show_progress_bar=False,
-            normalize_embeddings=True,
-        )
+        with torch.no_grad():
+            embeddings = self.model.encode(
+                texts,
+                batch_size=batch_size,
+                show_progress_bar=False,
+                normalize_embeddings=True,
+            )
         
         result = [emb.tolist() for emb in embeddings]
         if result and len(result[0]) != EMBEDDING_DIMENSION:

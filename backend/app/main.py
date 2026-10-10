@@ -8,6 +8,7 @@ from .config import FRONTEND_ORIGIN, ROOT_DIR
 from .api import health_router, ingest_router, playlists_router, chat_router
 from .services.manifest_service import ManifestService
 from .services.qdrant_service import QdrantService
+from .services.embedding_service import EmbeddingService
 from .utils.logger import logger
 
 @asynccontextmanager
@@ -16,6 +17,7 @@ async def lifespan(app: FastAPI):
     # Initialize singleton instances
     ManifestService.get_instance()
     QdrantService.get_instance()
+    EmbeddingService.get_instance()
     logger.info("YT Reviser Backend is ready and listening.")
     yield
     logger.info("Shutting down YT Reviser Backend...")
