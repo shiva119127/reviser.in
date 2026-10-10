@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+data/
+qdrant_db/
+backend/
+.venv/
+.pytest_cache/
+Dockerfile
+render.yaml
+railway.json
+Procfile
+pyproject.toml
+requirements.txt
