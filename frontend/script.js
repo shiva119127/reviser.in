@@ -4,10 +4,17 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     // ----------------------------------------------------------------------
+    const isLocalhost = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+    let savedApi = localStorage.getItem("ytReviserApiUrl");
+    if (isLocalhost && savedApi && (savedApi.includes("onrender.com") || savedApi.includes("vercel.app"))) {
+        localStorage.removeItem("ytReviserApiUrl");
+        savedApi = null;
+    }
+
     let API_BASE_URL = (
-        localStorage.getItem("ytReviserApiUrl") ||
-        (window.YT_REVISER_CONFIG && window.YT_REVISER_CONFIG.apiBaseUrl) ||
-        (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" ? "http://127.0.0.1:8000" : window.location.origin)
+        savedApi ||
+        (isLocalhost ? (window.location.port === "8000" ? window.location.origin : "http://127.0.0.1:8000") : (window.YT_REVISER_CONFIG && window.YT_REVISER_CONFIG.apiBaseUrl)) ||
+        window.location.origin
     ).replace(/\/+$/, "");
 
     let currentConversation = null;
