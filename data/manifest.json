@@ -2405,14 +2405,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/ahaLgJr3HcU.mp3",
+      "audio_path": "data/audio/ahaLgJr3HcU.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/ahaLgJr3HcU.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/ahaLgJr3HcU.json",
       "chunk_count": 3,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:46:37.271696",
-      "updated_at": "2026-10-10T12:35:35.335175"
+      "updated_at": "2026-10-11T01:34:25.148068"
     },
     "ruxb9RjAv4E": {
       "video_id": "ruxb9RjAv4E",
@@ -2424,14 +2424,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/ruxb9RjAv4E.mp3",
+      "audio_path": "data/audio/ruxb9RjAv4E.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/ruxb9RjAv4E.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/ruxb9RjAv4E.json",
       "chunk_count": 17,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.781093",
-      "updated_at": "2026-10-10T12:35:35.337664"
+      "updated_at": "2026-10-11T01:34:25.150723"
     },
     "Vl2WcqdizZ0": {
       "video_id": "Vl2WcqdizZ0",
@@ -2443,14 +2443,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/Vl2WcqdizZ0.mp3",
+      "audio_path": "data/audio/Vl2WcqdizZ0.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/Vl2WcqdizZ0.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/Vl2WcqdizZ0.json",
       "chunk_count": 31,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.783583",
-      "updated_at": "2026-10-10T12:35:35.339816"
+      "updated_at": "2026-10-11T01:34:25.154635"
     },
     "aF0IK2sIQyY": {
       "video_id": "aF0IK2sIQyY",
@@ -2462,14 +2462,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/aF0IK2sIQyY.mp3",
+      "audio_path": "data/audio/aF0IK2sIQyY.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/aF0IK2sIQyY.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/aF0IK2sIQyY.json",
       "chunk_count": 20,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.785930",
-      "updated_at": "2026-10-10T12:35:35.341968"
+      "updated_at": "2026-10-11T01:34:25.156999"
     },
     "e7oU6ZCvRrw": {
       "video_id": "e7oU6ZCvRrw",
@@ -2481,14 +2481,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/e7oU6ZCvRrw.mp3",
+      "audio_path": "data/audio/e7oU6ZCvRrw.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/e7oU6ZCvRrw.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/e7oU6ZCvRrw.json",
       "chunk_count": 27,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.788239",
-      "updated_at": "2026-10-10T12:35:35.344100"
+      "updated_at": "2026-10-11T01:34:25.159408"
     },
     "j7Re_09T-co": {
       "video_id": "j7Re_09T-co",
@@ -2500,14 +2500,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/j7Re_09T-co.mp3",
+      "audio_path": "data/audio/j7Re_09T-co.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/j7Re_09T-co.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/j7Re_09T-co.json",
       "chunk_count": 27,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.791769",
-      "updated_at": "2026-10-10T12:35:35.346360"
+      "updated_at": "2026-10-11T01:34:25.161641"
     },
     "9Ojj6tTYI9c": {
       "video_id": "9Ojj6tTYI9c",
@@ -2519,14 +2519,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/9Ojj6tTYI9c.mp3",
+      "audio_path": "data/audio/9Ojj6tTYI9c.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/9Ojj6tTYI9c.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/9Ojj6tTYI9c.json",
       "chunk_count": 38,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.794031",
-      "updated_at": "2026-10-10T12:35:35.348800"
+      "updated_at": "2026-10-11T01:34:25.163976"
     },
     "hveoP-ioP9I": {
       "video_id": "hveoP-ioP9I",
@@ -2538,14 +2538,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/hveoP-ioP9I.mp3",
+      "audio_path": "data/audio/hveoP-ioP9I.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/hveoP-ioP9I.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/hveoP-ioP9I.json",
       "chunk_count": 25,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.796969",
-      "updated_at": "2026-10-10T12:35:35.351372"
+      "updated_at": "2026-10-11T01:34:25.166231"
     },
     "solZdnrrtG4": {
       "video_id": "solZdnrrtG4",
@@ -2557,14 +2557,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/solZdnrrtG4.mp3",
+      "audio_path": "data/audio/solZdnrrtG4.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/solZdnrrtG4.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/solZdnrrtG4.json",
       "chunk_count": 26,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.799339",
-      "updated_at": "2026-10-10T12:35:35.353806"
+      "updated_at": "2026-10-11T01:34:25.168427"
     },
     "-aOdRksvZSo": {
       "video_id": "-aOdRksvZSo",
@@ -2576,14 +2576,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/-aOdRksvZSo.mp3",
+      "audio_path": "data/audio/-aOdRksvZSo.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/-aOdRksvZSo.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/-aOdRksvZSo.json",
       "chunk_count": 29,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.801669",
-      "updated_at": "2026-10-10T12:35:35.356023"
+      "updated_at": "2026-10-11T01:34:25.170569"
     },
     "U9za_updCsw": {
       "video_id": "U9za_updCsw",
@@ -2595,14 +2595,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/U9za_updCsw.mp3",
+      "audio_path": "data/audio/U9za_updCsw.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/U9za_updCsw.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/U9za_updCsw.json",
       "chunk_count": 14,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.804247",
-      "updated_at": "2026-10-10T12:35:35.358258"
+      "updated_at": "2026-10-11T01:34:25.172936"
     },
     "8eACtzJnAoU": {
       "video_id": "8eACtzJnAoU",
@@ -2614,14 +2614,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/8eACtzJnAoU.mp3",
+      "audio_path": "data/audio/8eACtzJnAoU.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/8eACtzJnAoU.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/8eACtzJnAoU.json",
       "chunk_count": 7,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.806714",
-      "updated_at": "2026-10-10T12:35:35.360471"
+      "updated_at": "2026-10-11T01:34:25.175193"
     },
     "l-WFxXyM66s": {
       "video_id": "l-WFxXyM66s",
@@ -2633,14 +2633,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/l-WFxXyM66s.mp3",
+      "audio_path": "data/audio/l-WFxXyM66s.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/l-WFxXyM66s.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/l-WFxXyM66s.json",
       "chunk_count": 22,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.808788",
-      "updated_at": "2026-10-10T12:35:35.362691"
+      "updated_at": "2026-10-11T01:34:25.178443"
     },
     "HA-VXeBwmgs": {
       "video_id": "HA-VXeBwmgs",
@@ -2652,14 +2652,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/HA-VXeBwmgs.mp3",
+      "audio_path": "data/audio/HA-VXeBwmgs.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/HA-VXeBwmgs.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/HA-VXeBwmgs.json",
       "chunk_count": 13,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.811355",
-      "updated_at": "2026-10-10T12:35:35.364862"
+      "updated_at": "2026-10-11T01:34:25.181087"
     },
     "dU5Nz-sMTdk": {
       "video_id": "dU5Nz-sMTdk",
@@ -2671,14 +2671,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/dU5Nz-sMTdk.mp3",
+      "audio_path": "data/audio/dU5Nz-sMTdk.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/dU5Nz-sMTdk.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/dU5Nz-sMTdk.json",
       "chunk_count": 21,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.813651",
-      "updated_at": "2026-10-10T12:35:35.366982"
+      "updated_at": "2026-10-11T01:34:25.183271"
     },
     "hSDo59FppOU": {
       "video_id": "hSDo59FppOU",
@@ -2690,14 +2690,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/hSDo59FppOU.mp3",
+      "audio_path": "data/audio/hSDo59FppOU.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/hSDo59FppOU.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/hSDo59FppOU.json",
       "chunk_count": 11,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.815732",
-      "updated_at": "2026-10-10T12:35:35.369457"
+      "updated_at": "2026-10-11T01:34:25.187245"
     },
     "fqf4pdGCev0": {
       "video_id": "fqf4pdGCev0",
@@ -2709,14 +2709,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/fqf4pdGCev0.mp3",
+      "audio_path": "data/audio/fqf4pdGCev0.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/fqf4pdGCev0.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/fqf4pdGCev0.json",
       "chunk_count": 18,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.817763",
-      "updated_at": "2026-10-10T12:35:35.371621"
+      "updated_at": "2026-10-11T01:34:25.189643"
     },
     "cCAu3dFtoQ8": {
       "video_id": "cCAu3dFtoQ8",
@@ -2728,14 +2728,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/cCAu3dFtoQ8.mp3",
+      "audio_path": "data/audio/cCAu3dFtoQ8.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/cCAu3dFtoQ8.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/cCAu3dFtoQ8.json",
       "chunk_count": 14,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.819840",
-      "updated_at": "2026-10-10T12:35:35.373939"
+      "updated_at": "2026-10-11T01:34:25.191922"
     },
     "7bxSYeNSWmQ": {
       "video_id": "7bxSYeNSWmQ",
@@ -2747,14 +2747,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/7bxSYeNSWmQ.mp3",
+      "audio_path": "data/audio/7bxSYeNSWmQ.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/7bxSYeNSWmQ.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/7bxSYeNSWmQ.json",
       "chunk_count": 23,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.821902",
-      "updated_at": "2026-10-10T12:35:35.376099"
+      "updated_at": "2026-10-11T01:34:25.194141"
     },
     "ZCNayichcKE": {
       "video_id": "ZCNayichcKE",
@@ -2766,14 +2766,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/ZCNayichcKE.mp3",
+      "audio_path": "data/audio/ZCNayichcKE.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/ZCNayichcKE.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/ZCNayichcKE.json",
       "chunk_count": 26,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.823912",
-      "updated_at": "2026-10-10T12:35:35.378568"
+      "updated_at": "2026-10-11T01:34:25.196600"
     },
     "Z9CI_OVhXNs": {
       "video_id": "Z9CI_OVhXNs",
@@ -2785,14 +2785,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/Z9CI_OVhXNs.mp3",
+      "audio_path": "data/audio/Z9CI_OVhXNs.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/Z9CI_OVhXNs.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/Z9CI_OVhXNs.json",
       "chunk_count": 12,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.825876",
-      "updated_at": "2026-10-10T12:35:35.380997"
+      "updated_at": "2026-10-11T01:34:25.198877"
     },
     "bm_0jH5ve8U": {
       "video_id": "bm_0jH5ve8U",
@@ -2804,14 +2804,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/bm_0jH5ve8U.mp3",
+      "audio_path": "data/audio/bm_0jH5ve8U.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/bm_0jH5ve8U.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/bm_0jH5ve8U.json",
       "chunk_count": 21,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.827879",
-      "updated_at": "2026-10-10T12:35:35.383168"
+      "updated_at": "2026-10-11T01:34:25.201489"
     },
     "KhHr4Y6v2TE": {
       "video_id": "KhHr4Y6v2TE",
@@ -2823,14 +2823,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/KhHr4Y6v2TE.mp3",
+      "audio_path": "data/audio/KhHr4Y6v2TE.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/KhHr4Y6v2TE.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/KhHr4Y6v2TE.json",
       "chunk_count": 32,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.829899",
-      "updated_at": "2026-10-10T12:35:35.385315"
+      "updated_at": "2026-10-11T01:34:25.203632"
     },
     "2CJAXE2JrsI": {
       "video_id": "2CJAXE2JrsI",
@@ -2842,14 +2842,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/2CJAXE2JrsI.mp3",
+      "audio_path": "data/audio/2CJAXE2JrsI.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/2CJAXE2JrsI.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/2CJAXE2JrsI.json",
       "chunk_count": 15,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.831829",
-      "updated_at": "2026-10-10T12:35:35.387752"
+      "updated_at": "2026-10-11T01:34:25.205754"
     },
     "RNj0AY4VueA": {
       "video_id": "RNj0AY4VueA",
@@ -2861,14 +2861,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/RNj0AY4VueA.mp3",
+      "audio_path": "data/audio/RNj0AY4VueA.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/RNj0AY4VueA.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/RNj0AY4VueA.json",
       "chunk_count": 24,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.833758",
-      "updated_at": "2026-10-10T12:35:35.392157"
+      "updated_at": "2026-10-11T01:34:25.207867"
     },
     "shSIHIpFjZY": {
       "video_id": "shSIHIpFjZY",
@@ -2880,14 +2880,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/shSIHIpFjZY.mp3",
+      "audio_path": "data/audio/shSIHIpFjZY.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/shSIHIpFjZY.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/shSIHIpFjZY.json",
       "chunk_count": 5,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.835951",
-      "updated_at": "2026-10-10T12:35:35.394845"
+      "updated_at": "2026-10-11T01:34:25.210076"
     },
     "VlvVpDZuykA": {
       "video_id": "VlvVpDZuykA",
@@ -2899,14 +2899,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/VlvVpDZuykA.mp3",
+      "audio_path": "data/audio/VlvVpDZuykA.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/VlvVpDZuykA.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/VlvVpDZuykA.json",
       "chunk_count": 14,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.837922",
-      "updated_at": "2026-10-10T12:35:35.397691"
+      "updated_at": "2026-10-11T01:34:25.212290"
     },
     "ZvYU7OlLAAE": {
       "video_id": "ZvYU7OlLAAE",
@@ -2918,14 +2918,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/ZvYU7OlLAAE.mp3",
+      "audio_path": "data/audio/ZvYU7OlLAAE.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/ZvYU7OlLAAE.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/ZvYU7OlLAAE.json",
       "chunk_count": 28,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.840590",
-      "updated_at": "2026-10-10T12:35:35.400086"
+      "updated_at": "2026-10-11T01:34:25.214450"
     },
     "Z3TGVruFSVI": {
       "video_id": "Z3TGVruFSVI",
@@ -2937,14 +2937,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/Z3TGVruFSVI.mp3",
+      "audio_path": "data/audio/Z3TGVruFSVI.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/Z3TGVruFSVI.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/Z3TGVruFSVI.json",
       "chunk_count": 14,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.842559",
-      "updated_at": "2026-10-10T12:35:35.402277"
+      "updated_at": "2026-10-11T01:34:25.216566"
     },
     "lv_jSHwnDeI": {
       "video_id": "lv_jSHwnDeI",
@@ -2956,14 +2956,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/lv_jSHwnDeI.mp3",
+      "audio_path": "data/audio/lv_jSHwnDeI.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/lv_jSHwnDeI.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/lv_jSHwnDeI.json",
       "chunk_count": 33,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.844932",
-      "updated_at": "2026-10-10T12:35:35.404618"
+      "updated_at": "2026-10-11T01:34:25.218856"
     },
     "F-Rz0EpBsfc": {
       "video_id": "F-Rz0EpBsfc",
@@ -2975,14 +2975,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/F-Rz0EpBsfc.mp3",
+      "audio_path": "data/audio/F-Rz0EpBsfc.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/F-Rz0EpBsfc.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/F-Rz0EpBsfc.json",
       "chunk_count": 15,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.846977",
-      "updated_at": "2026-10-10T12:35:35.406935"
+      "updated_at": "2026-10-11T01:34:25.221181"
     },
     "Uf71it2BKgQ": {
       "video_id": "Uf71it2BKgQ",
@@ -2994,14 +2994,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/Uf71it2BKgQ.mp3",
+      "audio_path": "data/audio/Uf71it2BKgQ.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/Uf71it2BKgQ.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/Uf71it2BKgQ.json",
       "chunk_count": 24,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.849163",
-      "updated_at": "2026-10-10T12:35:35.409125"
+      "updated_at": "2026-10-11T01:34:25.223433"
     },
     "teKavsgzpyo": {
       "video_id": "teKavsgzpyo",
@@ -3013,14 +3013,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/teKavsgzpyo.mp3",
+      "audio_path": "data/audio/teKavsgzpyo.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/teKavsgzpyo.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/teKavsgzpyo.json",
       "chunk_count": 18,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.851079",
-      "updated_at": "2026-10-10T12:35:35.411303"
+      "updated_at": "2026-10-11T01:34:25.225610"
     },
     "Wj5bX2uva4E": {
       "video_id": "Wj5bX2uva4E",
@@ -3032,14 +3032,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/Wj5bX2uva4E.mp3",
+      "audio_path": "data/audio/Wj5bX2uva4E.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/Wj5bX2uva4E.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/Wj5bX2uva4E.json",
       "chunk_count": 14,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.853127",
-      "updated_at": "2026-10-10T12:35:35.414606"
+      "updated_at": "2026-10-11T01:34:25.227769"
     },
     "XstMQwKpxcA": {
       "video_id": "XstMQwKpxcA",
@@ -3051,14 +3051,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/XstMQwKpxcA.mp3",
+      "audio_path": "data/audio/XstMQwKpxcA.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/XstMQwKpxcA.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/XstMQwKpxcA.json",
       "chunk_count": 9,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.855286",
-      "updated_at": "2026-10-10T12:35:35.417101"
+      "updated_at": "2026-10-11T01:34:25.230363"
     },
     "anvXVT46Oog": {
       "video_id": "anvXVT46Oog",
@@ -3070,14 +3070,14 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/anvXVT46Oog.mp3",
+      "audio_path": "data/audio/anvXVT46Oog.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/anvXVT46Oog.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/anvXVT46Oog.json",
       "chunk_count": 8,
       "language": "hi",
       "whisper_model": "small",
       "created_at": "2026-10-09T06:59:15.857543",
-      "updated_at": "2026-10-10T12:35:35.419320"
+      "updated_at": "2026-10-11T01:34:25.232522"
     },
     "vwncYfhxbR0": {
       "video_id": "vwncYfhxbR0",
@@ -3089,7 +3089,7 @@
       "status": "in_progress",
       "stage": "audio_downloaded",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/vwncYfhxbR0.mp3",
+      "audio_path": "data/audio/vwncYfhxbR0.mp3",
       "transcript_path": null,
       "chunk_path": null,
       "chunk_count": 0,
@@ -3108,7 +3108,7 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/yodh-oEFnb4.mp3",
+      "audio_path": "data/audio/yodh-oEFnb4.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/yodh-oEFnb4.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/yodh-oEFnb4.json",
       "chunk_count": 150,
@@ -3127,7 +3127,7 @@
       "status": "completed",
       "stage": "fully_completed",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/CUDT5E6jz84.mp3",
+      "audio_path": "data/audio/CUDT5E6jz84.mp3",
       "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/CUDT5E6jz84.json",
       "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/CUDT5E6jz84.json",
       "chunk_count": 163,
@@ -3146,7 +3146,7 @@
       "status": "in_progress",
       "stage": "audio_downloaded",
       "error": null,
-      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/P22qI2RnNjA.mp3",
+      "audio_path": "data/audio/P22qI2RnNjA.mp3",
       "transcript_path": null,
       "chunk_path": null,
       "chunk_count": 0,
@@ -3173,6 +3173,25 @@
       "whisper_model": null,
       "created_at": "2026-10-09T22:32:57.276538",
       "updated_at": "2026-10-10T09:22:44.480768"
+    },
+    "5mnBxySd_xU": {
+      "video_id": "5mnBxySd_xU",
+      "title": "Week 5 Major Project | Design Your Coding Agent",
+      "duration": 691.37,
+      "original_url": "https://www.youtube.com/watch?v=5mnBxySd_xU",
+      "playlist_id": "PLW4OpyGE0RdY",
+      "playlist_title": "AI Engineer In 10 Weeks | No Maths No Statistics | Crack AI Interviews",
+      "status": "completed",
+      "stage": "fully_completed",
+      "error": null,
+      "audio_path": "/Users/shivamsingh/Desktop/yt/data/audio/5mnBxySd_xU.mp3",
+      "transcript_path": "/Users/shivamsingh/Desktop/yt/data/transcripts/5mnBxySd_xU.json",
+      "chunk_path": "/Users/shivamsingh/Desktop/yt/data/chunks/5mnBxySd_xU.json",
+      "chunk_count": 8,
+      "language": "hi",
+      "whisper_model": "small",
+      "created_at": "2026-10-11T01:34:25.234805",
+      "updated_at": "2026-10-11T01:38:23.957234"
     }
   },
   "playlists": {
@@ -3216,10 +3235,11 @@
         "teKavsgzpyo",
         "Wj5bX2uva4E",
         "XstMQwKpxcA",
-        "anvXVT46Oog"
+        "anvXVT46Oog",
+        "5mnBxySd_xU"
       ],
-      "created_at": "2026-10-10T12:35:35.330234",
-      "last_synced_at": "2026-10-10T12:35:35.330219"
+      "created_at": "2026-10-11T01:34:25.143000",
+      "last_synced_at": "2026-10-11T01:34:25.142972"
     },
     "PLaldQ9PzZd9oXR4PMGR4pr_DX4wFHkFwR": {
       "playlist_id": "PLaldQ9PzZd9oXR4PMGR4pr_DX4wFHkFwR",
@@ -3236,5 +3256,5 @@
       "last_synced_at": "2026-10-10T09:22:44.465744"
     }
   },
-  "last_updated": "2026-10-10T12:35:35.419321"
+  "last_updated": "2026-10-11T01:38:23.957238"
 }

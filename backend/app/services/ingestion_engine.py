@@ -1,3 +1,4 @@
+import json
 import os
 import uuid
 import threading
@@ -12,7 +13,7 @@ from .chunking_service import ChunkingService
 from .embedding_service import EmbeddingService
 from .qdrant_service import QdrantService
 from ..models.manifest import VideoStage
-from ..models.schema import IngestJobResponse, VideoJobSummary
+from ..models.schema import IngestJobResponse, VideoJobSummary, TranscriptData
 from ..config import TRANSCRIPT_DIR, CHUNK_DIR, AUDIO_DIR
 from ..utils.logger import logger
 
@@ -189,39 +190,54 @@ class IngestionEngine:
     ):
         v_id = video_dict["video_id"]
         v_title = video_dict["title"]
+        transcript_path = TRANSCRIPT_DIR / f"{v_id}.json"
 
-        # Stage 1: Download Audio
-        job["current_stage"] = "downloading_audio"
-        job["videos"][video_idx]["stage"] = "downloading_audio"
-        audio_path = YouTubeService.download_audio(v_id)
-        self.manifest_service.update_video_stage(
-            video_id=v_id,
-            stage=VideoStage.AUDIO_DOWNLOADED,
-            audio_path=audio_path,
-        )
+        # If transcript already exists on disk, reuse it without downloading audio
+        if transcript_path.exists() and TranscriptionService.is_transcript_valid(transcript_path):
+            logger.info(f"Reusing existing transcript for {v_id} ({v_title})")
+            with open(transcript_path, "r", encoding="utf-8") as tf:
+                data = json.load(tf)
+                transcript = TranscriptData.model_validate(data)
+        else:
+            # Stage 1: Download Audio
+            job["current_stage"] = "downloading_audio"
+            job["videos"][video_idx]["stage"] = "downloading_audio"
+            try:
+                audio_path = YouTubeService.download_audio(v_id)
+            except Exception as dl_err:
+                err_msg = str(dl_err)
+                if any(k in err_msg.lower() for k in ["bot", "429", "sign in", "confirm", "rate limit"]):
+                    raise RuntimeError("YouTube anti-bot verification blocked cloud audio download. Pre-index videos locally and commit data.")
+                raise dl_err
 
-        # Stage 2: Transcribe Audio
-        job["current_stage"] = "transcribing (0%)"
-        job["videos"][video_idx]["stage"] = "transcribing"
+            self.manifest_service.update_video_stage(
+                video_id=v_id,
+                stage=VideoStage.AUDIO_DOWNLOADED,
+                audio_path=audio_path,
+            )
 
-        def on_transcribe_progress(stage_text: str):
-            job["current_stage"] = stage_text
-            job["videos"][video_idx]["stage"] = stage_text
+            # Stage 2: Transcribe Audio
+            job["current_stage"] = "transcribing (0%)"
+            job["videos"][video_idx]["stage"] = "transcribing"
 
-        transcript = TranscriptionService.transcribe(
-            audio_path=audio_path,
-            video_id=v_id,
-            title=v_title,
-            progress_callback=on_transcribe_progress,
-        )
-        self.manifest_service.update_video_stage(
-            video_id=v_id,
-            stage=VideoStage.TRANSCRIPTION_COMPLETED,
-            transcript_path=str(TRANSCRIPT_DIR / f"{v_id}.json"),
-            duration=transcript.duration,
-            language=transcript.language,
-            whisper_model=transcript.model,
-        )
+            def on_transcribe_progress(stage_text: str):
+                job["current_stage"] = stage_text
+                job["videos"][video_idx]["stage"] = stage_text
+
+            transcript = TranscriptionService.transcribe(
+                audio_path=audio_path,
+                video_id=v_id,
+                title=v_title,
+                progress_callback=on_transcribe_progress,
+            )
+            self.manifest_service.update_video_stage(
+                video_id=v_id,
+                stage=VideoStage.TRANSCRIPTION_COMPLETED,
+                transcript_path=str(transcript_path),
+                duration=transcript.duration,
+                language=transcript.language,
+                whisper_model=transcript.model,
+            )
 
         # Stage 3: Time-aware Chunking (~75s target)
         job["current_stage"] = "chunking"

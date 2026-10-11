@@ -58,6 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const progressBarFill = document.getElementById("progressBarFill");
     const jobVideosList = document.getElementById("jobVideosList");
     const recentJobsList = document.getElementById("recentJobsList");
+    const bannerGoToChatBtn = document.getElementById("bannerGoToChatBtn");
+
+    if (bannerGoToChatBtn) {
+        bannerGoToChatBtn.addEventListener("click", () => {
+            showPage("chatPage");
+            if (questionInput) questionInput.focus();
+        });
+    }
 
     // Playlists, History, Bookmarks
     const playlistsGrid = document.getElementById("playlistsGrid");
@@ -502,15 +510,27 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div>
                             <h3>${escapeHtml(pl.title)}</h3>
                             <div class="playlist-meta">
-                                <div>Indexed: ${pl.indexed_videos} / ${pl.total_videos} videos</div>
+                                <div>Indexed: <b>${pl.indexed_videos} / ${pl.total_videos}</b> videos</div>
                                 <div>ID: <code>${escapeHtml(pl.playlist_id)}</code></div>
                             </div>
                         </div>
-                        <button class="primary-btn sync-pl-btn" data-id="${escapeHtml(pl.playlist_id)}">
-                            ⟳ Sync Playlist
-                        </button>
+                        <div class="playlist-actions">
+                            <button class="primary-btn ask-pl-btn" data-id="${escapeHtml(pl.playlist_id)}">
+                                💬 Ask & Revise
+                            </button>
+                            <button class="secondary-btn sync-pl-btn" data-id="${escapeHtml(pl.playlist_id)}" title="Sync new updates">
+                                ⟳ Sync
+                            </button>
+                        </div>
                     `;
-                    card.querySelector(".sync-pl-btn").addEventListener("click", async () => {
+                    card.querySelector(".ask-pl-btn")?.addEventListener("click", () => {
+                        if (playlistFilterSelect) {
+                            playlistFilterSelect.value = pl.playlist_id;
+                        }
+                        showPage("chatPage");
+                        if (questionInput) questionInput.focus();
+                    });
+                    card.querySelector(".sync-pl-btn")?.addEventListener("click", async () => {
                         try {
                             const syncRes = await fetch(`${API_BASE_URL}/api/playlists/${pl.playlist_id}/sync`, { method: "POST" });
                             if (syncRes.ok) {

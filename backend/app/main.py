@@ -25,7 +25,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="YT Reviser API",
     description="AI-powered YouTube Lecture Revision and Incremental RAG API",
-    version="0.2.0",
+    version="0.2.1",
     lifespan=lifespan,
 )
 

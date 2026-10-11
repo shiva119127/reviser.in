@@ -35,6 +35,22 @@ class ManifestService:
                     with open(self.manifest_path, "r", encoding="utf-8") as f:
                         data = json.load(f)
                         self._manifest = IngestionManifest.model_validate(data)
+                        
+                        # Normalize entries to disk state
+                        for vid, ventry in self._manifest.videos.items():
+                            chunk_p = CHUNK_DIR / f"{vid}.json"
+                            trans_p = TRANSCRIPT_DIR / f"{vid}.json"
+                            if chunk_p.exists():
+                                ventry.status = "completed"
+                                ventry.stage = VideoStage.FULLY_COMPLETED
+                                ventry.chunk_path = str(chunk_p)
+                                if trans_p.exists():
+                                    ventry.transcript_path = str(trans_p)
+                            elif trans_p.exists():
+                                ventry.status = "completed"
+                                ventry.stage = VideoStage.TRANSCRIPTION_COMPLETED
+                                ventry.transcript_path = str(trans_p)
+                        
                         logger.info(f"Loaded manifest with {len(self._manifest.videos)} videos and {len(self._manifest.playlists)} playlists.")
                         return
                 except Exception as e:
@@ -117,9 +133,19 @@ class ManifestService:
 
     def is_video_completed(self, video_id: str) -> bool:
         with self._lock:
+            # 1. Direct file check on disk: if chunk exists, it is completely indexed
+            if (CHUNK_DIR / f"{video_id}.json").exists():
+                return True
+            # 2. Direct file check on disk: if transcript exists, it is at least transcribed
+            if (TRANSCRIPT_DIR / f"{video_id}.json").exists():
+                return True
             entry = self._manifest.videos.get(video_id)
-            if entry and entry.stage in (VideoStage.FULLY_COMPLETED, VideoStage.UPLOADED_TO_QDRANT) and entry.status == "completed":
-                if (TRANSCRIPT_DIR / f"{video_id}.json").exists():
+            if entry:
+                if entry.stage in (VideoStage.FULLY_COMPLETED, VideoStage.UPLOADED_TO_QDRANT) and entry.status == "completed":
+                    return True
+                if (entry.chunk_count or 0) > 0:
+                    return True
+                if entry.chunk_path and Path(entry.chunk_path).exists():
                     return True
                 if entry.transcript_path and Path(entry.transcript_path).exists():
                     return True

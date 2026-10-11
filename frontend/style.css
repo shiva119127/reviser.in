@@ -843,6 +843,69 @@ p {
     color: var(--text-muted);
 }
 
+.playlist-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.playlist-actions .primary-btn {
+    flex: 1;
+    padding: 8px 14px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.playlist-actions .secondary-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+}
+
+/* Pre-Indexed Banner */
+.pre-indexed-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.28);
+    border-radius: var(--radius-lg);
+}
+
+.pre-indexed-banner .banner-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.pre-indexed-banner .banner-icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.pre-indexed-banner strong {
+    display: block;
+    font-size: 15px;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.pre-indexed-banner p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.pre-indexed-banner .banner-action-btn {
+    white-space: nowrap;
+    padding: 9px 18px;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
 /* History & Bookmark Lists */
 .history-list, .bookmark-list {
     display: flex;

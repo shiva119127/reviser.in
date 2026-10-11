@@ -17,7 +17,7 @@ def health_check():
 
     return HealthResponse(
         status="healthy",
-        backend_version="0.2.0",
+        backend_version="0.2.1",
         whisper_ready=True,
         embeddings_ready=True,
         qdrant_ready=True,
@@ -33,7 +33,7 @@ def api_info():
     return {
         "status": "online",
         "service": "YT Reviser API",
-        "version": "0.2.0",
+        "version": "0.2.1",
         "docs_url": "/docs",
     }
 
